@@ -105,3 +105,5 @@ export default class Lightbox extends Component {
         document.getElementById("lbClose").focus();
     }
 }
+
+
