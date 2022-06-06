@@ -2,6 +2,27 @@
     display: none;
 }*/
 
+article,
+a,
+p,
+h1,
+button {
+  border: 2px solid transparent;
+}
+article:focus,
+a:focus,
+p:focus,
+h1:focus,
+button:focus,
+img:focus {
+  border: 2px dotted red;
+}
+a,
+a * {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .photographer .logo {
   height: 50px;
   width: 200px;
