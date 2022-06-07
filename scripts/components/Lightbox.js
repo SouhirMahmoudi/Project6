@@ -82,9 +82,9 @@ export default class Lightbox extends Component {
 
 
     remove() {
-        document.body.removeChild(this.DOM);
+        this.die();
         delete window.onkeydown;
-        window.location.reload();
+       new Lightbox();
 
     }
 
