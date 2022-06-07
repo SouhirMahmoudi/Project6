@@ -110,7 +110,18 @@ article {
   justify-content: space-between;
   align-items: center;
 }
-
+.VideoContainer {
+  height: 300px;
+  width: 350px;
+  border-radius: 5px;
+}
+video {
+  width: 100%;
+  height: 100;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 .card-media img {
   height: 300px;
   width: 350px;

@@ -109,10 +109,14 @@ body {
   color: #d3573c;
   font-size: 36px;
   font-weight: 400;
-  margin: 20px 0px 8px 0;
+  margin: 20px 0px 3px 0;
 }
 .test p {
   margin: 0;
+}
+
+.CardDescription {
+  line-height: 13.02px;
 }
 
 .city {
@@ -132,6 +136,14 @@ body {
   color: rgba(117, 117, 117, 1);
 }
 
+p.price {
+  font-family: DM Sans;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 a,
 p,
 h1,
