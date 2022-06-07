@@ -4,17 +4,17 @@ import {
 } from "../../data/dataManager.js";
 export default class FormModal extends Component {
   showForm = false;
-  body = document.getElementsByClassName(".photographer");
-  main = document.getElementById("#mainPhotographer");
-  modal = document.getElementsByClassName(".formModal");
-  openModalBtn = document.getElementsByClassName(".contact_button");
+  $body = document.querySelector(".photographer");
+  $main =  document.getElementById("mainPhotographer");
+  // $modal = document.getElementsByClassName(".formModal");
+  // openModalBtn;
   modalCloseBtn = document.getElementById("#close");
 
 
 
   /**
    * 
-   * @param {String} props.name
+   * @param {String} idPhotographer
    */
   constructor(idPhotographer) {
     super(document.body, "formModal", "div");
@@ -22,6 +22,10 @@ export default class FormModal extends Component {
     this.currentPhotographer = getPhotographerById(idPhotographer);
   }
   renderModal() {
+    this.$main.setAttribute("aria-hidden", !this.showForm);
+    this.DOM.setAttribute("aria-hidden", this.showForm);
+    this.DOM.style.display = this.showForm ? "block" : "none";
+
     this.DOM.innerHTML = !this.showForm ? "" : this.formTemplate();
   }
 
@@ -65,25 +69,18 @@ export default class FormModal extends Component {
 
 
   displayModal() {
-    const formContainer = document.getElementById("components_formModal");
-    formContainer.style.display = "block";
     this.showForm = true;
     this.renderModal();
-    this.$main.attr("aria-hidden", "false");
-    this.modal.attr("aria-hidden", "true");
-    this.$body.removeClass("no-scroll");
-    this.openModalBtn.focus();
+    this.$body.classList.remove("no-scroll");
+    const openModalBtn = document.querySelector(".contact_button");
+    openModalBtn.focus();
+    
   }
 
   closeModal() {
-    const formContainer = document.getElementById("components_formModal");
-    formContainer.style.display = "none";
     this.showForm = false;
     this.renderModal();
-    this.$main.attr("aria-hidden", "true");
-    this.modal.attr("aria-hidden", "false");
-    this.$bodybody.addClass("no-scroll");
-    this.modalCloseBtn.focus();
+    this.$body.classList.add("no-scroll");
   }
 
 }
