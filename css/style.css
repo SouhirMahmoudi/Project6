@@ -89,7 +89,7 @@ body {
   /* bottom: -54%; */
 }
 
-a#components_Mimi_Keel img {
+#components_Mimi_Keel img {
   overflow: hidden;
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
@@ -109,7 +109,7 @@ a#components_Mimi_Keel img {
   /* margin-bottom: 19%; */
   position: absolute;
 }
-a#components_Ellie_Rose_Wilkens img {
+#components_Ellie_Rose_Wilkens img {
   overflow: hidden;
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
@@ -130,7 +130,7 @@ a#components_Ellie_Rose_Wilkens img {
   position: absolute;
 }
 
-a#components_Tracy_Galindo img {
+#components_Tracy_Galindo img {
   overflow: hidden;
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
@@ -151,7 +151,7 @@ a#components_Tracy_Galindo img {
   position: absolute;
 }
 
-a#components_Nabeel_Bradford img {
+#components_Nabeel_Bradford img {
   overflow: hidden;
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
@@ -171,7 +171,7 @@ a#components_Nabeel_Bradford img {
   /* margin-bottom: 19%;*/
 }
 
-a#components_Rhode_Dubois img {
+#components_Rhode_Dubois img {
   overflow: hidden;
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
@@ -190,7 +190,7 @@ a#components_Rhode_Dubois img {
   margin-top: -3%;
   /* margin-bottom: 19%;*/
 }
-a#components_Marcel_Nikolic img {
+#components_Marcel_Nikolic img {
   overflow: hidden;
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
