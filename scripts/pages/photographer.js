@@ -73,5 +73,3 @@ window.onload = showMediaFactory;
 
 
 
-
-

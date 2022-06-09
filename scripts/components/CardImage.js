@@ -17,16 +17,18 @@ export default class CardImage extends  Component{
         super(DOMtarget, props.name, "a", props);
         this.DOM.className="test";
         this.DOM.setAttribute("title", `${this.name} nouvelle page`);
-        this.DOM.href=`./photographer.html?${this.id}`;
-        this.DOM.tabIndex=0;
+        this.DOM.tabIndex=-1;
     }
     
 
     render(){
         this.DOM.innerHTML = `
+       <a href="./photographer.html?${this.id}"> 
+       <div class="CardHeader" tabindex="0">
         <div class="ImageContainer"><img src="assets/images/${this.portrait}" alt="${this.alt}"></div>
         <h2>${this.name}</h2> 
-         <div class="CardDescription">
+        </div></a>
+         <div class="CardDescription" tabindex="0">
         <p class="city">${this.city} ,${this.country}</p>
         <p class="tagline"> ${this.tagline}</p>
         <p class="price">${this.price} €/jour </p>

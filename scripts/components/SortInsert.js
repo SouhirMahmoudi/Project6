@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 import CardMedia from "../components/CardMedia.js";
 import CardVideo from "../components/CardVideo.js";
 import {
@@ -21,8 +22,8 @@ export default class SortInsert extends Component {
     render() {
         this.DOM.innerHTML = `
         <p class="trier">Trier par</p>
-        <button id="btnFirst"  value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)">Popularité</button>
-        <i class="fas fa-chevron-down"></i>
+        <button id="btnFirst"  value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)"><i id="fas" class="fas fa-chevron-down"></i>Popularité</button>
+        
               <div class="Dropdown">
               <button id="btn" value="date" onclick="${this.component_id}.sort(this)">Date</button>
               <button id="btn" value="title" onclick="${this.component_id}.sort(this)">Titre</button>

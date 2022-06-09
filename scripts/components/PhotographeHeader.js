@@ -13,19 +13,21 @@ export default class PhotographeHeader extends  Component{
     constructor(DOMtarget, props){
         super(DOMtarget, props.name, "div", props);
         this.DOM.className="photograph-header";
-        this.DOM.tabIndex=0;
+        this.DOM.tabIndex=-1;
     }
     
 
     render(){
         this.DOM.innerHTML = `
-        <div class="info">
-        <h1>${this.name}</h1>
+        <div class="info" >
+        <h1 tabindex="0">${this.name}</h1>
+        <div class="desc" tabindex="0">
         <p class="city">${this.city} ,${this.country}</p>
         <p class="tagline"> ${this.tagline}</p>
         </div>
-        <button class="contact_button" onclick="components_formModal.displayModal()"> Contactez-moi </button>
-        <div class="ImageContainer2"><img src="assets/images/${this.portrait}" alt="${this.alt}"></div> 
+        </div>
+        <button tabindex="0" class="contact_button" onclick="components_formModal.displayModal()"> Contactez-moi </button>
+        <div tabindex="0" class="ImageContainer2"><img src="assets/images/${this.portrait}" alt="${this.alt}"></div> 
        ` ;
     }
 
