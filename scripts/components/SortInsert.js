@@ -24,9 +24,9 @@ export default class SortInsert extends Component {
         <p class="trier">Trier par</p>
         <button id="btnFirst"  value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)"><i id="fas" class="fas fa-chevron-down"></i>Popularité</button>
         
-              <div class="Dropdown">
-              <button id="btn" value="date" onclick="${this.component_id}.sort(this)">Date</button>
-              <button id="btn" value="title" onclick="${this.component_id}.sort(this)">Titre</button>
+              <div class="Dropdown" id="dropdown">
+              <button id="btn" value="date" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Date</button>
+              <button id="btn" value="title" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Titre</button>
                 </div>
        
        ` ;
@@ -38,12 +38,17 @@ export default class SortInsert extends Component {
         <option value="date">Date</option>
         <option value="title">Titre</option>
     </select>*/
-
     myFunction() {
         var element = document.querySelector(".Dropdown");
         element.classList.toggle("IsVisible");
         var element2 = document.querySelector(".fa-chevron-down");
         element2.classList.toggle("fa-chevron-up");
+      }
+      removeToggle(){
+        var element = document.querySelector(".Dropdown");
+        element.classList.remove("IsVisible");
+        var element2 = document.querySelector(".fa-chevron-down");
+        element2.classList.remove("fa-chevron-down");
       }
     sort(button) {
         const idPhotographer = parseInt(window.location.search.slice(1));
