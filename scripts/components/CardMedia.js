@@ -25,7 +25,7 @@ export default class CardMedia extends Component {
 
     render() {
         this.DOM.innerHTML = `
-        <img src="assets/images/${this.image}" alt="${this.altText}" onclick="components_lightbox.showLightBox(${this.id})"> 
+        <img id="image" src="assets/images/${this.image}" alt="${this.altText}" onclick="components_lightbox.showLightBox(${this.id})"> 
         <div class="description">
         <h2>${this.title}</h2>
         <div class="likes">

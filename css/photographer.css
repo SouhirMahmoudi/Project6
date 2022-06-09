@@ -113,9 +113,6 @@ a * {
   align-items: center;
 }
 
-article {
-  margin: 30px 0px;
-}
 .photographer .mediaContainer {
   display: flex;
   flex-direction: row;
@@ -130,10 +127,15 @@ article {
 }
 video {
   width: 100%;
-  height: 100;
   height: 100%;
   object-fit: cover;
   margin-bottom: 10px;
+  z-index: 0;
+}
+video#video {
+  margin-top: 10px;
+ 
+  
 }
 .card-media img {
   height: 300px;
@@ -495,12 +497,17 @@ i.fas.fa-chevron-right {
 }
 
 /****************************SortBox****************************************/
-.sort label {
+.sort {
+  display: flex;
+  flex-direction: row;
+}
+p.trier {
+  padding-right: 20px;
   position: absolute;
   width: 74px;
   height: 23px;
   left: 97px;
-  top: 499px;
+  top: 466px;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
@@ -508,47 +515,82 @@ i.fas.fa-chevron-right {
   line-height: 23px;
   color: #000000;
 }
-
-#sort-box {
-  height: 69px;
-  width: 170px;
-  left: 196px;
-  top: 479px;
+button#btn {
+  left: 97px;
+  top: 168px;
   background: #911c1c;
-  border-radius: 5px;
-  border-radius: 0px;
-  position: absolute;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
+  width: 88%;
+  height: 45px;
   font-size: 18px;
+  font-weight: 700;
   line-height: 23px;
-  color: #ffffff;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  border: 0px;
+  border-top: 1px solid white;
+  margin: auto;
+  padding-left:8px;
+  padding-top: 10px;
+  cursor:pointer;
+  z-index: 1;
 }
 
-#sort-box option {
-  position: absolute;
-  left: 11.76%;
-  right: 35.29%;
-  top: 33.33%;
-  bottom: 33.33%;
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
+button#btnFirst {
   font-size: 18px;
+  font-weight: 700;
   line-height: 23px;
-  color: #ffffff;
-}
-#sort-box::after {
-  content: "\276F";
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  background: #911c1c;
+  height: 60px;
+  width: 165px;
+  border-radius: 5px;
   position: absolute;
-  top: 20%;
-  right: 0;
-  padding: 0 15px;
-  background: white;
-  pointer-events: none;
-  transform: rotate(90deg);
-  font-size: 1.5em;
-  background: #f9f9f9;
+  left: 197px;
+  top: 466px;
+  background: #911c1c;
+  padding-top: 16px;
+  padding-left: 15px;
+  cursor:pointer;
+}
+i{
+  position: absolute;
+  /* background: black; */
+  top: 494px;
+  left: 328px;
+  color: white;
+}
+
+ /* button#btnFirst::after {
+    content: "\f078";
+    height: 21px;
+    width: 20px;
+    font-family: "Font awesome 5 free";
+    padding-left: -10px;
+    padding-left: 27px;
+    font-weight: bold;
+
+}
+button#btnFirst:hover::after {
+
+  transform: rotate(45deg);
+}*/
+.Dropdown {
+  display: none;
+  display: none;
+  background: #911c1c;
+  height: 112px;
+  width: 165px;
+  border-radius: 5px;
+  position: absolute;
+  left: 197px;
+  top: 520px;
+  background: #911c1c;
+}
+
+.Dropdown.IsVisible {
+  display: flex;
+  flex-direction: column;
 }

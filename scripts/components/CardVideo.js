@@ -21,7 +21,7 @@ export default class CardVideo extends Component {
     }
     render() {
         this.DOM.innerHTML = `
-        <div class="VideoContainer"> <video src="assets/images/${this.video}#t=5" type="video/mp4" onclick="components_lightbox.showLightBox(${this.id})"> </div>
+        <div class="VideoContainer"> <video id="video"src="assets/images/${this.video}#t=5" type="video/mp4"  pointer-events="fill" onclick="components_lightbox.showLightBox(${this.id})"> </div>
         </video>
         <div class="description">
         <h2>${this.title}</h2>

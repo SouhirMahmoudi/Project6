@@ -20,19 +20,33 @@ export default class SortInsert extends Component {
 
     render() {
         this.DOM.innerHTML = `
-        <label for="sort-box">Trier par</label>
-        <select id="sort-box" name="select-box" onchange="${this.component_id}.sort(this)">
-            <option value="popularity"> Popularité </option>
-            <option value="date">Date</option>
-            <option value="title">Titre</option>
-        </select>
+        <p class="trier">Trier par</p>
+        <button id="btnFirst"  value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)">Popularité</button>
+        <i class="fas fa-chevron-down"></i>
+              <div class="Dropdown">
+              <button id="btn" value="date" onclick="${this.component_id}.sort(this)">Date</button>
+              <button id="btn" value="title" onclick="${this.component_id}.sort(this)">Titre</button>
+                </div>
+       
        ` ;
     }
 
+   /* 
+    <select id="sort-box" name="select-box" onchange="${this.component_id}.sort(this)">
+        <option value="popularity"> Popularité </option>
+        <option value="date">Date</option>
+        <option value="title">Titre</option>
+    </select>*/
 
-    sort(select) {
+    myFunction() {
+        var element = document.querySelector(".Dropdown");
+        element.classList.toggle("IsVisible");
+        var element2 = document.querySelector(".fa-chevron-down");
+        element2.classList.toggle("fa-chevron-up");
+      }
+    sort(button) {
         const idPhotographer = parseInt(window.location.search.slice(1));
-        const mode = select.value;
+        var mode = button.value;
         const sorted = JSON.parse(JSON.stringify(sortFromDataManager(mode, (getMediaByPhotographerId(idPhotographer)))));
         for (const component of window.mediaComponents) {
             component.die();
