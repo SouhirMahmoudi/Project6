@@ -580,6 +580,9 @@ button#btnFirst:hover::after {
 
   transform: rotate(45deg);
 }*/
+.NONE{
+  display: none;
+}
 .Dropdown {
   display: none;
   display: none;
