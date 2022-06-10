@@ -56,6 +56,7 @@ export default class CardVideo extends Component {
 
         }
         
+         }
         
-            }
+            
     

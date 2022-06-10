@@ -37,7 +37,7 @@ export default class Lightbox extends Component {
         
     
 
-        const focusableElements = "button,[tabindex]:not([tabindex='-1'])";
+        const focusableElements = "button,video,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); // select the lightbox by it's id
 
         const firstFocusableElement = lightbox.querySelectorAll(focusableElements)[0]; // get first element to be focused inside lightbox
@@ -66,7 +66,13 @@ export default class Lightbox extends Component {
         });
 
         firstFocusableElement.focus();
-      
+        var video = document.getElementById("lbMedia"); 
+        
+        document.onkeypress = function(e){
+            if((e || window.event).keyCode === 32){
+                video.paused ? video.play() : video.pause();
+            }
+        };
 
         document.onkeydown = function (e) {
             switch (e.key) {
@@ -99,7 +105,7 @@ export default class Lightbox extends Component {
         if (this.currentMedia.image) {
             return `<img src="./assets/images/${this.currentMedia.image}" id="lbMedia" alt="${this.alt}" />`;
         }
-        return `<video controls autoplay id="lbMedia"> 
+        return `<video controls id="lbMedia"> 
         <source src="assets/images/${this.currentMedia.video}" type="video/mp4"  />
     </video>`;
     }
