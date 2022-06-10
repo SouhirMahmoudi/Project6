@@ -24,7 +24,7 @@ export default class CardMedia extends Component {
 
     render() {
         this.DOM.innerHTML = `
-        <img id="image" src="assets/images/${this.image}" alt="${this.altText}" onclick="components_lightbox.showLightBox(${this.id})"> 
+        <input type="image" id="image"tabindex=0 src="assets/images/${this.image}" alt="${this.altText}" onclick="components_lightbox.showLightBox(${this.id})"> 
         <div class="description">
         <h2>${this.title}</h2>
         <div class="likes">
@@ -48,6 +48,8 @@ export default class CardMedia extends Component {
         this.render();
 
     }
+
+    
 
 }
 

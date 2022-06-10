@@ -18,10 +18,18 @@ export default class CardVideo extends Component {
         this.DOM.id = this.id;
         if (!window.mediaComponents) window.mediaComponents = [];
         window.mediaComponents.push(this);
-    }
-    render() {
-        this.DOM.innerHTML = `
-        <div class="VideoContainer"> <video id="video"src="assets/images/${this.video}#t=5" type="video/mp4"  pointer-events="fill" onclick="components_lightbox.showLightBox(${this.id})"> </div>
+        
+
+            var video = document.getElementById("video");
+            document.onkeypress = function (e) {
+                if ((e || window.event).keyCode === 13) {
+                    video.onclick();
+                }
+            };
+        }
+        render() {
+            this.DOM.innerHTML = `
+        <div class="VideoContainer"> <video id="video"src="assets/images/${this.video}#t=5" type="video/mp4"  pointer-events="fill" tabindex="0" onclick="components_lightbox.showLightBox(${this.id})"> </div>
         </video>
         <div class="description">
         <h2>${this.title}</h2>
@@ -31,19 +39,19 @@ export default class CardVideo extends Component {
         </div>
         </div>
        ` ;
+        }
+        /**
+         *  @param {Number}      currentMediaId 
+         * @param {object}         currentMedia
+       **/
+
+
+        Like() {
+            this.liked = !this.liked;
+            if (!this.liked) this.likes--;
+            else this.likes++;
+            this.updateLikes(this.liked);
+            this.render();
+
+        }
     }
-    /**
-     *  @param {Number}      currentMediaId 
-     * @param {object}         currentMedia
-   **/
-
-
-    Like() {
-        this.liked = !this.liked;
-        if (!this.liked) this.likes--;
-        else this.likes++;
-        this.updateLikes(this.liked);
-        this.render();
-
-    }
-}

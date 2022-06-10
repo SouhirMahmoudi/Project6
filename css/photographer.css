@@ -137,7 +137,7 @@ video {
 video#video {
   margin-top: 10px;
 }
-.card-media img {
+#image {
   height: 300px;
   width: 350px;
   border-radius: 5px;

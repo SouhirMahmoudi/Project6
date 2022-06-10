@@ -116,12 +116,4 @@ export default class FormModal extends Component {
 }
 
 
-// Close modal when espace key is pressed
-/*(document).on("keydown", e => {
-    const keyCode = e.keyCode ? e.keyCode : e.which
-
-    if ($modal.attr("aria-hidden") == "false" && keyCode === 27) {
-      closeModal()
-    }
-})*/
 

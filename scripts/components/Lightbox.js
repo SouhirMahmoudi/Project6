@@ -19,11 +19,10 @@ export default class Lightbox extends Component {
      * @param {Array.<Object>} mediaList 
      * @param {Number}         currentMediaId 
      * @param {object}         currentMedia
+     * 
      */
     showLightBox(currentMediaId) {
-      
-       
-        this.currentMediaId = currentMediaId; 
+        this.currentMediaId = currentMediaId;
         this.mediaList = [];
         this.idList = [];
         document.querySelectorAll("article").forEach(elm => {
@@ -35,7 +34,13 @@ export default class Lightbox extends Component {
         this.DOM.innerHTML = this.html;
         const lightContainer = document.getElementById("components_lightbox");
         lightContainer.style.display = "block";
-
+        
+        this.currentMedia.onkeypress = function (e) {
+            if ((e || window.event).keyCode === 13) {
+                alert("yes");
+            this.showLightBox(this.currentMediaId);
+            }
+        };
 
         const focusableElements = "button,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); // select the lightbox by it's id
@@ -66,7 +71,7 @@ export default class Lightbox extends Component {
         });
 
         firstFocusableElement.focus();
-
+      
 
         document.onkeydown = function (e) {
             switch (e.key) {
@@ -77,7 +82,7 @@ export default class Lightbox extends Component {
                     components_lightbox.gotoNextMedia();
             }
         };
-
+    
     }
 
 
