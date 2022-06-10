@@ -35,12 +35,7 @@ export default class Lightbox extends Component {
         const lightContainer = document.getElementById("components_lightbox");
         lightContainer.style.display = "block";
         
-        this.currentMedia.onkeypress = function (e) {
-            if ((e || window.event).keyCode === 13) {
-                alert("yes");
-            this.showLightBox(this.currentMediaId);
-            }
-        };
+    
 
         const focusableElements = "button,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); // select the lightbox by it's id
@@ -104,7 +99,7 @@ export default class Lightbox extends Component {
         if (this.currentMedia.image) {
             return `<img src="./assets/images/${this.currentMedia.image}" id="lbMedia" alt="${this.alt}" />`;
         }
-        return `<video controls="controls" id="lbMedia"> 
+        return `<video controls autoplay id="lbMedia"> 
         <source src="assets/images/${this.currentMedia.video}" type="video/mp4"  />
     </video>`;
     }
@@ -140,6 +135,7 @@ export default class Lightbox extends Component {
 
     }
 
+}
 
 
 
@@ -157,6 +153,6 @@ export default class Lightbox extends Component {
      }*/
 
 
-}
+
 
 

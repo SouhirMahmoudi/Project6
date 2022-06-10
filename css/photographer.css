@@ -17,13 +17,13 @@ img:focus {
   border: 2px dotted red;
 }*/
 
-.CardHeader,
+/*.CardHeader,
 button:focus {
   border: 5px solid #95fff9;
 }
-.CardDescription:focus {
+/*.CardDescription:focus {
   border: 5px solid #95fff9;
-}
+}*/
 
 .photographer .logo {
   height: 50px;

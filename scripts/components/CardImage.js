@@ -24,7 +24,7 @@ export default class CardImage extends  Component{
     render(){
         this.DOM.innerHTML = `
        <a href="./photographer.html?${this.id}"> 
-       <div class="CardHeader" tabindex="0">
+       <div class="CardHeader" tabindex="1">
         <div class="ImageContainer"><img src="assets/images/${this.portrait}" alt="${this.alt}"></div>
         <h2>${this.name}</h2> 
         </div></a>

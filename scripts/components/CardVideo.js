@@ -21,15 +21,16 @@ export default class CardVideo extends Component {
         
 
             var video = document.getElementById("video");
-            document.onkeypress = function (e) {
+           video.onkeypress = function (e) {
                 if ((e || window.event).keyCode === 13) {
                     video.onclick();
                 }
             };
-        }
+            }
+        
         render() {
             this.DOM.innerHTML = `
-        <div class="VideoContainer"> <video id="video"src="assets/images/${this.video}#t=5" type="video/mp4"  pointer-events="fill" tabindex="0" onclick="components_lightbox.showLightBox(${this.id})"> </div>
+        <div class="VideoContainer"> <video id="video" src="assets/images/${this.video}#t=5" type="video/mp4"  pointer-events="fill" tabindex="0" onclick="components_lightbox.showLightBox(${this.id});${this.component_id}.play()"> </div>
         </video>
         <div class="description">
         <h2>${this.title}</h2>
@@ -54,4 +55,7 @@ export default class CardVideo extends Component {
             this.render();
 
         }
-    }
+        
+        
+            }
+    
