@@ -17,14 +17,13 @@ img:focus {
   border: 2px dotted red;
 }*/
 
-.CardHeader,button:focus {
-  border: 5px solid #95FFF9;
+.CardHeader,
+button:focus {
+  border: 5px solid #95fff9;
 }
-.CardDescription:focus{
-  border: 5px solid #95FFF9;
-
+.CardDescription:focus {
+  border: 5px solid #95fff9;
 }
-
 
 .photographer .logo {
   height: 50px;
@@ -137,8 +136,6 @@ video {
 }
 video#video {
   margin-top: 10px;
- 
-  
 }
 .card-media img {
   height: 300px;
@@ -412,8 +409,10 @@ div#components_lightbox {
   width: 90%;
   max-width: 1253px;
   height: 984px;
-  border: 2px solid #95fff9;
   background-color: white;
+}
+.lightbox :focus {
+  border: 2px solid #95fff9;
 }
 
 .lightbox h4 {
@@ -533,9 +532,9 @@ button#btn {
   border: 0px;
   border-top: 1px solid white;
   margin: auto;
-  padding-left:8px;
+  padding-left: 8px;
   padding-top: 10px;
-  cursor:pointer;
+  cursor: pointer;
   z-index: 1;
 }
 
@@ -556,17 +555,17 @@ button#btnFirst {
   background: #911c1c;
   padding-top: 16px;
   padding-left: 15px;
-  cursor:pointer;
+  cursor: pointer;
 }
-#fas{
+#fas {
   position: absolute;
-  background: #911C1C;
+  background: #911c1c;
   top: 25px;
   left: 133px;
   color: white;
 }
 
- /* button#btnFirst::after {
+/* button#btnFirst::after {
     content: "\f078";
     height: 21px;
     width: 20px;
@@ -580,7 +579,7 @@ button#btnFirst:hover::after {
 
   transform: rotate(45deg);
 }*/
-.NONE{
+.NONE {
   display: none;
 }
 .Dropdown {
@@ -600,5 +599,3 @@ button#btnFirst:hover::after {
   display: flex;
   flex-direction: column;
 }
-
-

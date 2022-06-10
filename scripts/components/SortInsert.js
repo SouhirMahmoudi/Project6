@@ -48,7 +48,7 @@ export default class SortInsert extends Component {
         var element = document.querySelector(".Dropdown");
         element.classList.remove("IsVisible");
         var element2 = document.querySelector(".fa-chevron-down");
-        element2.classList.remove("fa-chevron-down");
+        element2.classList.remove("fa-chevron-up");
       }
     sort(button) {
         const idPhotographer = parseInt(window.location.search.slice(1));

@@ -19,7 +19,6 @@ export default class CardMedia extends Component {
         this.liked = false;
         if (!window.mediaComponents) window.mediaComponents = [];
         window.mediaComponents.push(this);
-        console.log(this.component_id);
     }
 
 
