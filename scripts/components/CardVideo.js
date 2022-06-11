@@ -33,9 +33,9 @@ export default class CardVideo extends Component {
         <div class="VideoContainer"> <video id="video" src="assets/images/${this.video}#t=5" type="video/mp4"  pointer-events="fill" tabindex="0" onclick="components_lightbox.showLightBox(${this.id});${this.component_id}.play()"> </div>
         </video>
         <div class="description">
-        <h2>${this.title}</h2>
+        <h2 tabindex=0>${this.title}</h2>
         <div class="likes">
-        <p class="ShowLikes"> ${this.likes} </p>
+        <p tabindex=0 class="ShowLikes"> ${this.likes} </p>
         <button id ="btnLike" class="heart" onclick="${this.component_id}.Like()"></button>
         </div>
         </div>

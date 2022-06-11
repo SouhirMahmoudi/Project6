@@ -2,26 +2,47 @@
     display: none;
 }*/
 
-article,
-p,
-h1,
-button {
-  border: 2px solid transparent;
-}
-article:focus,
-p:focus,
-h1:focus,
-img:focus {
-  border: 2px solid #95fff9 !important;
+a{
+  border: 5px solid transparent;
+  outline: 0;
 }
 
-input:focus,
-.CardHeader:focus,
-button:focus {
-  border: 5px solid #95fff9 !important;
+
+p,
+h2,
+h1,
+button,
+div{
+  border: 2px solid transparent;
+  outline: 0;
 }
-.CardDescription:focus {
+
+article:focus,
+p:focus,
+h2:focus,
+h1:focus,
+img:focus,
+div:focus {
+  border: 2px solid #95fff9 !important;
+  outline: none !important;
+}
+i {
+  pointer-events: none;
+}
+input {
+  border: 0;
+  outline: 0;
+  pointer-events: auto;
+}
+input:focus {
+  outline: none !important;
+}
+a:focus,
+input:focus,
+button:focus
+ {
   border: 5px solid #95fff9 !important;
+  outline: none !important;
 }
 
 .photographer .logo {
@@ -260,6 +281,15 @@ button.Heart::after {
   display: flex;
   align-items: center;
 }
+.contact_button:hover{
+  background-color:#DB8876 !important;
+  color:black !important;
+}
+.contact_button:focus{
+  background-color: #DB8876!important;;
+  color: black !important;;
+  outline: 0!important;;
+}
 
 .contact_button {
   font-size: 20px;
@@ -322,7 +352,11 @@ button.Heart::after {
   bottom: 20.83%;
   cursor: pointer;
 }
-
+input#close {
+  position: absolute;
+  left: 757px;
+  top: 42px;
+}
 .modal header h2 {
   position: absolute;
   left: 4.23%;
@@ -587,7 +621,7 @@ button#btnFirst:hover::after {
   display: none;
   background: #911c1c;
   height: 112px;
-  width: 165px;
+  width: 161px;
   border-radius: 5px;
   position: absolute;
   left: 197px;

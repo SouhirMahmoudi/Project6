@@ -90,9 +90,9 @@ export default class Lightbox extends Component {
 
     get html() {
         return ` <div class= "lightbox">
-            <input type="button" id="lbClose" onclick="${this.component_id}.remove()" tabindex="1"> <i class="fas fa-times"></i> 
-            <input type="button" id="lbPrev" onclick="${this.component_id}.gotoPreviousMedia()" tabindex="1"><i class="fas fa-chevron-left"></i>
-            <input type="button"  id="lbNext" onclick="${this.component_id}.gotoNextMedia()" tabindex="1"><i class="fas fa-chevron-right"></i>
+            <input type="button" id="lbClose" onclick="${this.component_id}.remove()" tabindex="1"> <i class="fas fa-times"></i> </>
+            <input type="button" id="lbPrev" onclick="${this.component_id}.gotoPreviousMedia()" tabindex="1"><i class="fas fa-chevron-left"></i></>
+            <input type="button"  id="lbNext" onclick="${this.component_id}.gotoNextMedia()" tabindex="1"><i class="fas fa-chevron-right"></i></>
             ${this.showMedia()}
             <h4>${this.currentMedia.title}</h4>
             </div>
