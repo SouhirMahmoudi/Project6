@@ -35,7 +35,7 @@ export default class FormModal extends Component {
     <div class="modal" aria-hidden="true" role="dialog" aria-describedby="modalTitle"  tabindex="-1">
       <header>
         <h2>Contactez-moi ${this.currentPhotographer.name}</h2>
-      <input type="image" id="image" src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" tabindex="1" />
+      <input type="image" src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" tabindex="1" />
       </header>
       <form>
         <div class="prenom">
