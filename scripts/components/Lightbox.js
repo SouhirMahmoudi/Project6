@@ -90,9 +90,9 @@ export default class Lightbox extends Component {
 
     get html() {
         return ` <div class= "lightbox">
-            <button id="lbClose" onclick="${this.component_id}.remove()" tabindex="1"> <i class="fas fa-times"></i> </button>
-            <button id="lbPrev" onclick="${this.component_id}.gotoPreviousMedia()" tabindex="1"><i class="fas fa-chevron-left"></i></button> 
-            <button id="lbNext" onclick="${this.component_id}.gotoNextMedia()" tabindex="1"><i class="fas fa-chevron-right"></i></button>
+            <input type="button"  id="lbClose" onclick="${this.component_id}.remove()" tabindex="1"> <i class="fas fa-times"></i> </>
+            <input type="button" id="lbPrev" onclick="${this.component_id}.gotoPreviousMedia()" tabindex="1"><i class="fas fa-chevron-left"></i></> 
+            <input type="button  id="lbNext" onclick="${this.component_id}.gotoNextMedia()" tabindex="1"><i class="fas fa-chevron-right"></i></>
             ${this.showMedia()}
             <h4>${this.currentMedia.title}</h4>
             </div>
@@ -103,7 +103,7 @@ export default class Lightbox extends Component {
 
     showMedia() {
         if (this.currentMedia.image) {
-            return `<img src="./assets/images/${this.currentMedia.image}" id="lbMedia" alt="${this.alt}" />`;
+            return `<img src="./assets/images/${this.currentMedia.image}" id="lbMedia" alt="${this.currentMedia.image.alt}" />`;
         }
         return `<video controls id="lbMedia"> 
         <source src="assets/images/${this.currentMedia.video}" type="video/mp4"  />

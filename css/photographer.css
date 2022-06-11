@@ -12,9 +12,10 @@ article:focus,
 p:focus,
 h1:focus,
 img:focus {
-  border:  2px solid #95fff9 !important;
+  border: 2px solid #95fff9 !important;
 }
 
+input:focus,
 .CardHeader:focus,
 button:focus {
   border: 5px solid #95fff9 !important;
@@ -398,7 +399,6 @@ div#components_lightbox {
   height: 100%;
   overflow: auto;
   background-color: white;
- 
 }
 .lightbox {
   position: relative;
@@ -440,7 +440,7 @@ div#components_lightbox {
 
 #lbClose {
   height: 42px;
-  width: 42px;
+  width: 51px;
   left: 15px;
   top: 15px;
   border-radius: 0px;
@@ -453,20 +453,20 @@ div#components_lightbox {
 i.fas.fa-times {
   border-radius: 0px;
   position: absolute;
-  left: 4.83%;
+  left: 94.83%;
   top: 2.83%;
   font-size: 42px;
   color: #911c1c;
 }
 #lbPrev {
-  height: 29.639999389648462px;
-  width: 47.99999618530278px;
+  height: 60px;
+  width: 60px;
   left: 61.639892578125px;
   top: 24px;
   border-radius: 0px;
   position: absolute;
-  left: 1.79%;
-  top: 46%;
+  left: 0.79%;
+  top: 45%;
   background-color: transparent;
 }
 
@@ -492,7 +492,7 @@ i.fas.fa-chevron-left {
 
 i.fas.fa-chevron-right {
   position: absolute;
-  left: -5.21%;
+  left: 94.79%;
   top: 46%;
   color: #911c1c;
   font-size: 42px;
