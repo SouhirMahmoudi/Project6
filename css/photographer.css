@@ -8,22 +8,20 @@ h1,
 button {
   border: 2px solid transparent;
 }
-/*article:focus,
-a:focus,
+article:focus,
 p:focus,
 h1:focus,
-button:focus,
 img:focus {
-  border: 2px dotted red;
-}*/
-
-/*.CardHeader,
-button:focus {
-  border: 5px solid #95fff9;
+  border:  2px solid #95fff9 !important;
 }
-/*.CardDescription:focus {
-  border: 5px solid #95fff9;
-}*/
+
+.CardHeader:focus,
+button:focus {
+  border: 5px solid #95fff9 !important;
+}
+.CardDescription:focus {
+  border: 5px solid #95fff9 !important;
+}
 
 .photographer .logo {
   height: 50px;
@@ -400,6 +398,7 @@ div#components_lightbox {
   height: 100%;
   overflow: auto;
   background-color: white;
+ 
 }
 .lightbox {
   position: relative;
@@ -410,6 +409,7 @@ div#components_lightbox {
   max-width: 1253px;
   height: 984px;
   background-color: white;
+  border: 2px solid #95fff9;
 }
 .lightbox :focus {
   border: 2px solid #95fff9;
