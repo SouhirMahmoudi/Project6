@@ -32,12 +32,7 @@ export default class SortInsert extends Component {
        ` ;
     }
 
-   /* 
-    <select id="sort-box" name="select-box" onchange="${this.component_id}.sort(this)">
-        <option value="popularity"> Popularité </option>
-        <option value="date">Date</option>
-        <option value="title">Titre</option>
-    </select>*/
+  
     myFunction() {
         var element = document.querySelector(".Dropdown");
         element.classList.toggle("IsVisible");
@@ -58,7 +53,7 @@ export default class SortInsert extends Component {
             component.die();
         }
         window.mediaComponents = [];
-        const target = document.getElementById("mainPhotographer");
+        const target = document.getElementsByClassName("mediaContainer");
         for (const media of sorted) {
             if (media.hasOwnProperty("image")) {
                 new CardMedia(target, media);
@@ -74,5 +69,10 @@ export default class SortInsert extends Component {
 
 
 
-
+ /* 
+    <select id="sort-box" name="select-box" onchange="${this.component_id}.sort(this)">
+        <option value="popularity"> Popularité </option>
+        <option value="date">Date</option>
+        <option value="title">Titre</option>
+    </select>*/
 
