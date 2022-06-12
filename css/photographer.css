@@ -6,7 +6,11 @@ a{
   border: 5px solid transparent;
   outline: 0;
 }
-
+a.lienLogo {
+  display: block;
+  height: 100%;
+  width: 20%;
+}
 
 p,
 h2,
