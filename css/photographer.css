@@ -354,7 +354,7 @@ button.Heart::after {
 }
 input#close {
   position: absolute;
-  left: 757px;
+  left:719px;
   top: 42px;
 }
 .modal header h2 {
