@@ -32,19 +32,19 @@ export default class SortInsert extends Component {
        ` ;
     }
 
-  
+
     myFunction() {
         var element = document.querySelector(".Dropdown");
         element.classList.toggle("IsVisible");
         var element2 = document.querySelector(".fa-chevron-down");
         element2.classList.toggle("fa-chevron-up");
-      }
-      removeToggle(){
+    }
+    removeToggle() {
         var element = document.querySelector(".Dropdown");
         element.classList.remove("IsVisible");
         var element2 = document.querySelector(".fa-chevron-down");
         element2.classList.remove("fa-chevron-up");
-      }
+    }
     sort(button) {
         const idPhotographer = parseInt(window.location.search.slice(1));
         var mode = button.value;
@@ -53,13 +53,16 @@ export default class SortInsert extends Component {
             component.die();
         }
         window.mediaComponents = [];
-        const target = document.getElementsByClassName("mediaContainer");
+        const target = document.getElementById("mainPhotographer");
+        const mediaContainer = document.createElement("div");
+        mediaContainer.className = "mediaContainer";
+        target.appendChild(mediaContainer);
         for (const media of sorted) {
             if (media.hasOwnProperty("image")) {
-                new CardMedia(target, media);
+                new CardMedia(mediaContainer, media);
             }
             else {
-                new CardVideo(target, media);
+                new CardVideo(mediaContainer, media);
             }
         }
     }
@@ -69,10 +72,10 @@ export default class SortInsert extends Component {
 
 
 
- /* 
-    <select id="sort-box" name="select-box" onchange="${this.component_id}.sort(this)">
-        <option value="popularity"> Popularité </option>
-        <option value="date">Date</option>
-        <option value="title">Titre</option>
-    </select>*/
+/*
+   <select id="sort-box" name="select-box" onchange="${this.component_id}.sort(this)">
+       <option value="popularity"> Popularité </option>
+       <option value="date">Date</option>
+       <option value="title">Titre</option>
+   </select>*/
 
