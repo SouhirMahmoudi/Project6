@@ -68,7 +68,7 @@ export default class Lightbox extends Component {
         firstFocusableElement.focus();
         var video = document.getElementById("lbMedia"); 
         
-        document.onkeypress = function(e){
+        video.onkeypress = function(e){
             if((e || window.event).keyCode === 32){
                 video.paused ? video.play() : video.pause();
             }

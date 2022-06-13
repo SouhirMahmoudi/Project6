@@ -109,10 +109,13 @@ export default class FormModal extends Component {
   closeModal() {
     this.showForm = false;
     this.renderModal();
-    this.$body.classList.add("no-scroll");
+    document.onkeypress = function(e){
+      if((e || window.event).keyCode === 27){
+          this.closeModal();
+      }
+  };
+
   }
-
-
 }
 
 

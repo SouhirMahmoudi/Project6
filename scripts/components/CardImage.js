@@ -1,5 +1,5 @@
 import Component from "../factories/Component.js";
-export default class CardImage extends  Component{
+export default class CardImage extends Component {
 
     /**
      * 
@@ -13,19 +13,21 @@ export default class CardImage extends  Component{
      * @param {String} props.alt
      * @param {Number} props.id
      */
-    constructor(DOMtarget, props){
+    constructor(DOMtarget, props) {
         super(DOMtarget, props.name, "a", props);
-        this.DOM.className="test";
+        this.DOM.className = "test";
         this.DOM.setAttribute("title", `${this.name} nouvelle page`);
-        this.DOM.tabIndex=-1;
+        this.DOM.tabIndex = -1;
     }
-    
 
-    render(){
+
+    render() {
         this.DOM.innerHTML = `
        <a href="./photographer.html?${this.id}"> 
        <div class="CardHeader" tabindex="1">
-        <div class="ImageContainer"><img src="assets/images/${this.portrait}" alt="${this.alt}"></div>
+        <div class="ImageContainer">
+        <img src="assets/images/${this.portrait}" alt="${this.alt}">
+        </div>
         <h2>${this.name}</h2> 
         </div></a>
          <div class="CardDescription" tabindex="0">
@@ -35,6 +37,6 @@ export default class CardImage extends  Component{
         </div>
        ` ;
     }
-    
+
 }
 
