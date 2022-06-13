@@ -4,7 +4,7 @@ import CardVideo from "../components/CardVideo.js";
 import {
     getMediaByPhotographerId,
     sort as sortFromDataManager
-} from "../../data/dataManager.js"; 
+} from "../../data/dataManager.js";
 import Component from "../factories/Component.js";
 
 export default class SortInsert extends Component {
@@ -54,6 +54,23 @@ export default class SortInsert extends Component {
         for (const component of window.mediaComponents) {
             component.die();
         }
+        var mediaList = [];
+        
+       sorted.forEach(elm => {
+            mediaList.push((elm.likes));
+        });
+        let sumLikes = 0;
+        for (let i = 0; i < mediaList.length; i++) {
+            sumLikes += mediaList[i];
+        }
+
+        const dataInsert = document.getElementById("update");
+        dataInsert.innerHTML = "<p>" + sumLikes + "</p>";
+
+        function update(liked) {
+            sumLikes += liked ? 1 : -1;
+            dataInsert.innerHTML = "<p>" + sumLikes + "</p>";
+        }
         window.mediaComponents = [];
         const target = document.getElementById("mainPhotographer");
         const mediaContainer = document.createElement("div");
@@ -61,10 +78,10 @@ export default class SortInsert extends Component {
         target.appendChild(mediaContainer);
         for (const media of sorted) {
             if (media.hasOwnProperty("image")) {
-                new CardMedia(mediaContainer, media);
+                new CardMedia(mediaContainer, media, update);
             }
             else {
-                new CardVideo(mediaContainer, media);
+                new CardVideo(mediaContainer, media, update);
             }
         }
     }
