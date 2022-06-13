@@ -48,19 +48,6 @@ function sort(mode, list){
 }
 
 
-
-/*function CountLike() {
-    var cnt = 0;
-    cnt = parseInt(cnt) + parseInt(1);
-    var divData = document.getElementById("showCount");
-   // divData.innerHTML = cnt + ;
-
-}
-/*function getIdBy(MediaId){
-    return data.media.filter(obj=>{
-        if (obj.id === MediaId) return obj;
-    })[0];
-}*/
 export {
     getMediaByPhotographerId,
     getPhotographerById,

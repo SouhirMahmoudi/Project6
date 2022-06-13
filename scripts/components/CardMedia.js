@@ -1,4 +1,4 @@
-import Component from "../Component.js";
+import Component from "../factories/Component.js";
 export default class CardMedia extends Component {
 
     /** 

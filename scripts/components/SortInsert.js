@@ -4,7 +4,9 @@ import CardVideo from "../components/CardVideo.js";
 import {
     getMediaByPhotographerId,
     sort as sortFromDataManager
-} from "../../data/dataManager.js"; import Component from "../Component.js";
+} from "../../data/dataManager.js"; 
+import Component from "../factories/Component.js";
+
 export default class SortInsert extends Component {
 
     /**
