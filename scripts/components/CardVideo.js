@@ -21,7 +21,7 @@ export default class CardVideo extends Component {
         
 
             var video = document.getElementById("video");
-           document.onkeypress = function (e) {
+            video.onkeypress = function (e) {
                 if ((e || window.event).keyCode === 13) {
                     video.onclick();
                 }
