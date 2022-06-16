@@ -27,7 +27,7 @@ export default class PhotographeHeader extends  Component{
         </div>
         </div>
         <button tabindex="0" id="btnContact" class="contact_button" onclick="components_formModal.displayModal()"> Contactez-moi </button>
-        <div tabindex="0" class="ImageContainer2"><img src="assets/images/${this.portrait}" alt="${this.alt}"></div> 
+        <img src="assets/photographers/${this.portrait}" tabindex="0" alt="${this.alt}">
        ` ;
     }
 

@@ -16,7 +16,8 @@ p,
 h2,
 h1,
 button,
-div{
+div, 
+video{
   border: 2px solid transparent;
   outline: 0;
 }
@@ -35,7 +36,7 @@ i {
   pointer-events: none;
 }
 input {
-  border: 0;
+  border: 5px solid transparent;
   outline: 0;
   pointer-events: auto;
 }
@@ -71,19 +72,6 @@ button:focus
   justify-items: center;
   align-items: center;
 }
-.ImageContainer2 {
-  width: 300px;
-  overflow: hidden;
-  position: relative;
-  height: 200px;
-  background: #c4c4c4;
-  box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
-  width: 200px !important;
-  height: 200px !important;
-  color: rgba(196, 196, 196, 1);
-  box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
-  border-radius: 50%;
-}
 
 .photograph-header img {
   height: 200px;
@@ -92,6 +80,8 @@ button:focus
   margin-right: 34px;
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+  object-position: center;
 }
 
 .info {
@@ -203,22 +193,21 @@ video#video {
 button.heart {
   font-size: 23px;
   background-color: transparent;
-  display: inline-block;
-  border: none;
+
 }
 button.heart::after {
   content: "\f004";
   font-family: "Font awesome 5 free";
   height: 18.350000381469727px;
   width: 17.5px;
-  margin-left: 1.75px;
-  margin-top: 3px;
+  /* margin-left: 1.75px; */
+  /* margin-top: 3px; */
   border-radius: 0px;
   color: #911c1c;
   font-weight: bold;
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center;*/
 }
 .insert {
   height: 89px;
@@ -349,21 +338,21 @@ button.Heart::after {
   width: 100%;
 }
 
-.modal header #image {
+/*.modal header #image {
   position: absolute;
   left: 89.83%;
   right: -13.17%;
   top: 4.83%;
   bottom: 20.83%;
   cursor: pointer;
-}
-input#close {
+}*/
+/*input#close {
   position: absolute;
   left:719px;
   top: 42px;
-}
+}*/
 .modal header h2 {
-  position: absolute;
+ /* position: absolute;*/
   left: 4.23%;
   right: 27.65%;
   top: 1.67%;

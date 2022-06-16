@@ -25,9 +25,9 @@ export default class CardImage extends Component {
         this.DOM.innerHTML = `
        <a href="./photographer.html?${this.id}"> 
        <div class="CardHeader">
-        <div class="ImageContainer">
-        <img src="assets/images/${this.portrait}" alt="${this.alt}">
-        </div>
+        
+        <img src="assets/photographers/${this.portrait}" alt="${this.alt}">
+    
         <h2>${this.name}</h2> 
         </div></a>
          <div class="CardDescription" tabindex="0">

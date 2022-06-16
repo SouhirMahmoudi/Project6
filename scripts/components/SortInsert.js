@@ -23,7 +23,7 @@ export default class SortInsert extends Component {
 
     render() {
         this.DOM.innerHTML = `
-        <p class="trier">Trier par</p>
+        <p tabindex="0" class="trier">Trier par</p>
         <button id="btnFirst"  value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)"><i id="fas" class="fas fa-chevron-down"></i>Popularité</button>
         
               <div class="Dropdown" id="dropdown">
