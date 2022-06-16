@@ -1,7 +1,10 @@
 /*#contact_modal {
     display: none;
 }*/
-
+.noScroll{
+  overflow: hidden;
+}
+ 
 a{
   border: 5px solid transparent;
   outline: 0;

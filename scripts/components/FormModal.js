@@ -80,6 +80,9 @@ export default class FormModal extends Component {
     displayModal() {
       this.showForm = true;
       this.renderModal();
+      const page = document.querySelector("body");
+      page.classList.add("noScroll");
+
 
 
       const focusableElements =
@@ -118,6 +121,9 @@ export default class FormModal extends Component {
     closeModal() {
       this.showForm = false;
       this.renderModal();
+      const page = document.querySelector("body");
+      page.classList.remove("noScroll");
+      
       document.getElementById("btnContact").focus();
     }
 
