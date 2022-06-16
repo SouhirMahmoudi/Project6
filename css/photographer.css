@@ -313,25 +313,19 @@ button.Heart::after {
 }
 
 .modal {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1253px;
-  height: 984px;
-  border: 2px solid #95fff9;
-  height: 900px;
-  border-radius: 5px;
-  background-color: #db8876;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 35px;
-  margin: auto;
+    background-color: #fefefe;
+    border: 2px solid #95fff9;
+    border-radius: 5px;
+    background-color: #db8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:15px 35px;
+    margin: auto;
+    height: 959px;
 }
+
 
 .modal header {
   justify-content: space-between;
@@ -351,7 +345,8 @@ button.Heart::after {
   left:719px;
   top: 42px;
 }*/
-.modal header h2 {
+.modal header h2,
+.modal header h3{
  /* position: absolute;*/
   left: 4.23%;
   right: 27.65%;
@@ -365,12 +360,16 @@ button.Heart::after {
   color: #000000;
   margin: 0;
 }
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
 form {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: -31px;
+  
 }
 
 form label {
@@ -406,11 +405,6 @@ textarea#message {
 }
 
 button#envoyer {
-  position: absolute;
-  left: 5%;
-  right: 0%;
-  top: 91%;
-  bottom: 0%;
   background: #911c1c;
   border-radius: 5px;
   font-size: 20px;
@@ -423,6 +417,7 @@ button#envoyer {
   background-color: #901c1c;
   border-radius: 5px;
   cursor: pointer;
+  margin-top:37px;
   }
 
 

@@ -38,8 +38,11 @@ export default class FormModal extends Component {
     <div id="contact_modal">
     <div class="modal" aria-hidden="true" role="dialog"  tabindex="-1">
       <header>
-        <h2>Contactez-moi ${this.currentPhotographer.name}</h2>
+      <div class="headerContainer">
+      <h2>Contactez-moi</h2>
       <input type="image" src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" tabindex="1" />
+      </div>
+      <h3> ${this.currentPhotographer.name}</h3>
       </header>
       <form>
         <div class="prenom">
@@ -61,7 +64,9 @@ export default class FormModal extends Component {
           <textarea tabindex="1" id="message" name="message" rows="5" cols="33">
           </textarea>
         </div>
+        <div>
         <button tabindex="1" class="envoyer_button" id ="envoyer">Envoyer</button>
+        </div>
       </form>
     </div>
   </div>
