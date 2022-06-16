@@ -24,12 +24,12 @@ export default class CardMedia extends Component {
 
     render() {
         this.DOM.innerHTML = `
-        <input type="image" id="image"tabindex=0 src="assets/images/${this.image}" alt="${this.altText}" onclick="components_lightbox.showLightBox(${this.id})"> 
+        <input type="image" id="image" class="mediaFirst" tabindex=0 src="assets/images/${this.image}" alt="${this.alt}" onclick="components_lightbox.showLightBox(${this.id})"> 
         <div class="description">
         <h2 tabindex=0>${this.title}</h2>
         <div class="likes">
         <p tabindex=0 class="showLikes"> ${this.likes} </p>
-        <button id="btnLike" class="heart" onclick="${this.component_id}.Like()"></button>
+        <button id="btnLike" class="heart" onclick="${this.component_id}.Like(${this.id})"></button>
         </div>
         </div>
        ` ;
@@ -40,13 +40,16 @@ export default class CardMedia extends Component {
    **/
 
 
-    Like() {
+    Like(mediaId) {
         this.liked = !this.liked;
         if (!this.liked) this.likes--;
         else this.likes++;
         this.updateLikes(this.liked);
         this.render();
-
+        var currentMedia = document.getElementById(mediaId);
+        var currentElem = currentMedia.querySelector(".heart");
+        currentElem.focus();
+        
     }
 
     

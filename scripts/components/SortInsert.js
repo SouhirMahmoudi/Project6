@@ -84,6 +84,7 @@ export default class SortInsert extends Component {
                 new CardVideo(mediaContainer, media, update);
             }
         }
+        document.getElementById("btnFirst").focus();
     }
 
 }

@@ -34,8 +34,8 @@ export default class Lightbox extends Component {
         this.DOM.innerHTML = this.html;
         const lightContainer = document.getElementById("components_lightbox");
         lightContainer.style.display = "block";
-        
-    
+
+       
 
         const focusableElements = "button,video,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); // select the lightbox by it's id
@@ -43,6 +43,7 @@ export default class Lightbox extends Component {
         const firstFocusableElement = lightbox.querySelectorAll(focusableElements)[0]; // get first element to be focused inside lightbox
         const focusableContent = lightbox.querySelectorAll(focusableElements);
         const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside lightbox
+
 
 
         document.addEventListener("keydown", function (e) {
@@ -66,13 +67,13 @@ export default class Lightbox extends Component {
         });
 
         firstFocusableElement.focus();
-        var video = document.getElementById("lbMedia"); 
+        /*var video = document.getElementById("lbMedia"); 
         
-        video.onkeypress = function(e){
+        video.onkeypress = async function(e){
             if((e || window.event).keyCode === 32){
-                video.paused ? video.play() : video.pause();
+                video.paused ? await video.play() : await video.pause();
             }
-        };
+        };*/
 
         document.onkeydown = function (e) {
             switch (e.key) {
@@ -81,9 +82,12 @@ export default class Lightbox extends Component {
                     break;
                 case "ArrowRight":
                     components_lightbox.gotoNextMedia();
+                    break;
+                case "Escape":
+                    components_lightbox.remove();
             }
         };
-    
+
     }
 
 
@@ -105,7 +109,7 @@ export default class Lightbox extends Component {
         if (this.currentMedia.image) {
             return `<img src="./assets/images/${this.currentMedia.image}" id="lbMedia" alt="${this.currentMedia.image.alt}" />`;
         }
-        return `<video controls id="lbMedia"> 
+        return `<video controls id="lbMedia" tabindex=1> 
         <source src="assets/images/${this.currentMedia.video}" type="video/mp4"  />
     </video>`;
     }
@@ -132,31 +136,30 @@ export default class Lightbox extends Component {
 
 
 
-
-
     remove() {
         this.die();
-        delete window.onkeydown;
         new Lightbox();
-
+        console.log(this.mediaList[0]);
+       document.getElementsByClassName("mediaFirst")[0].focus();
+      
     }
 
 }
 
 
 
-    /* keyListener(event) {
-         // alert("out");
-         if (event.code === "Tab") {
-             setTimeout(lightbox.checkFocus, 100);
-         }
+/* keyListener(event) {
+     // alert("out");
+     if (event.code === "Tab") {
+         setTimeout(lightbox.checkFocus, 100);
      }
+ }
  
-     /*checkFocus() {
-         const currentId = document.activeElement.id ? document.activeElement.id : null;
-         if (currentId !== null && lightbox.possibleIds.includes(currentId)) return;
-         document.getElementById("lbClose").focus();
-     }*/
+ /*checkFocus() {
+     const currentId = document.activeElement.id ? document.activeElement.id : null;
+     if (currentId !== null && lightbox.possibleIds.includes(currentId)) return;
+     document.getElementById("lbClose").focus();
+ }*/
 
 
 
