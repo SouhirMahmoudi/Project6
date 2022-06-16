@@ -31,12 +31,10 @@ export default class CardVideo extends Component {
     render() {
         this.DOM.innerHTML = `
         <div class="VideoContainer">
-
             <video 
             class="mediaFirst"
                 id="video" 
                 src="assets/images/${this.video}#t=1" 
-                type="video/mp4"  
                 tabindex="0" 
                 onclick="components_lightbox.showLightBox(${this.id})">
             </video>

@@ -27,8 +27,8 @@ export default class SortInsert extends Component {
         <button id="btnFirst"  value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)"><i id="fas" class="fas fa-chevron-down"></i>Popularité</button>
         
               <div class="Dropdown" id="dropdown">
-              <button id="btn" value="date" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Date</button>
-              <button id="btn" value="title" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Titre</button>
+              <button id="btnDate" value="date" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Date</button>
+              <button id="btnTitle" value="title" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Titre</button>
                 </div>
        
        ` ;
