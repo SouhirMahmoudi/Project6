@@ -158,6 +158,7 @@ video#video {
   height: 300px;
   width: 350px;
   border-radius: 5px;
+  object-fit:cover;
 }
 .description {
   display: flex;
@@ -308,7 +309,7 @@ button.Heart::after {
   left: 0;
   top: 0;
   width: 100%;
-  height: 850px!important;
+  height: 84vh;
   overflow: scroll !important;
   background-color: rgba(196, 196, 196, 0.4);
 }
@@ -324,7 +325,7 @@ button.Heart::after {
   align-items: center;
   padding: 15px 35px;
   margin: auto;
-  height: 959px;
+  height: 100%;
 }
 
 .modal header {
@@ -363,6 +364,9 @@ button.Heart::after {
 .headerContainer {
   display: flex;
   justify-content: space-between;
+}
+.headerContainer button {
+  background-color: #db8876;
 }
 form {
   display: flex;
@@ -550,8 +554,7 @@ p.trier {
   color: #000000;
 }
 button#btnTitle,
-button#btnDate
-{
+button#btnDate {
   left: 97px;
   top: 168px;
   background: #911c1c;

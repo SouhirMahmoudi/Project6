@@ -17,7 +17,7 @@ export default class CardImage extends Component {
         super(DOMtarget, props.name, "div", props);
         this.DOM.className = "test";
         this.DOM.setAttribute("title", `${this.name} nouvelle page`);
-        this.DOM.tabIndex = -1;
+        this.DOM.tabIndex = "-1";
     }
 
 
@@ -25,9 +25,7 @@ export default class CardImage extends Component {
         this.DOM.innerHTML = `
        <a href="./photographer.html?${this.id}"> 
        <div class="CardHeader">
-        
         <img src="assets/photographers/${this.portrait}" alt="${this.alt}">
-    
         <h2>${this.name}</h2> 
         </div></a>
          <div class="CardDescription" tabindex="0">

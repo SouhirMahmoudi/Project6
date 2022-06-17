@@ -36,11 +36,11 @@ export default class FormModal extends Component {
     formTemplate() {
       return `
     <div id="contact_modal">
-    <div class="modal" aria-hidden="true" role="dialog"  tabindex="-1">
+    <div class="modal" role="dialog"  tabindex="0">
       <header>
       <div class="headerContainer">
       <h2>Contactez-moi</h2>
-      <input type="image" src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" tabindex="1" />
+     <button tabindex="1" aria-label="fermer formulaire"> <img src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" /></button>
       </div>
       <h3> ${this.currentPhotographer.name}</h3>
       </header>
@@ -65,7 +65,7 @@ export default class FormModal extends Component {
           </textarea>
         </div>
         <div>
-        <button tabindex="1" class="envoyer_button" id ="envoyer">Envoyer</button>
+        <button tabindex="1" aria-label="envoyer" class="envoyer_button" id ="envoyer">Envoyer</button>
         </div>
       </form>
     </div>
@@ -86,13 +86,13 @@ export default class FormModal extends Component {
 
 
       const focusableElements =
-        "button, input,img, textarea, [tabindex]:not([tabindex='-1'])";
+        "button, input, textarea, [tabindex]:not([tabindex='-1'])";
       const modal = document.querySelector(".modal"); // select the modal by it's id
-
+ 
       const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
       const focusableContent = modal.querySelectorAll(focusableElements);
       const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
-
+       console.log(focusableContent,firstFocusableElement);
 
       document.addEventListener("keydown", function (e) {
         let isTabPressed = e.key === "Tab" || e.keyCode === 9;

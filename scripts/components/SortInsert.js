@@ -24,11 +24,11 @@ export default class SortInsert extends Component {
     render() {
         this.DOM.innerHTML = `
         <p tabindex="0" class="trier">Trier par</p>
-        <button id="btnFirst"  value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)"><i id="fas" class="fas fa-chevron-down"></i>Popularité</button>
+        <button id="btnFirst" aria-label="trier par popularité" value="popularity" onclick="${this.component_id}.myFunction();${this.component_id}.sort(this)"><i id="fas" class="fas fa-chevron-down"></i>Popularité</button>
         
               <div class="Dropdown" id="dropdown">
-              <button id="btnDate" value="date" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Date</button>
-              <button id="btnTitle" value="title" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Titre</button>
+              <button id="btnDate" aria-label="trier par date" value="date" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Date</button>
+              <button id="btnTitle" aria-label="trier par titre" value="title" onclick="${this.component_id}.sort(this);${this.component_id}.removeToggle()">Titre</button>
                 </div>
        
        ` ;

@@ -9,11 +9,12 @@ export default class PhotographeHeader extends  Component{
      * @param {String} props.country
      * @param {String} props.tagline
      * @param {String} props.portrait
+     * @param {String} props.alt
      */
     constructor(DOMtarget, props){
         super(DOMtarget, props.name, "div", props);
         this.DOM.className="photograph-header";
-        this.DOM.tabIndex=-1;
+        this.DOM.tabIndex= "-1";
     }
     
 
@@ -26,7 +27,7 @@ export default class PhotographeHeader extends  Component{
         <p class="tagline"> ${this.tagline}</p>
         </div>
         </div>
-        <button tabindex="0" id="btnContact" class="contact_button" onclick="components_formModal.displayModal()"> Contactez-moi </button>
+        <button tabindex="0" id="btnContact" aria-label="bouton contactez-moi" class="contact_button" onclick="components_formModal.displayModal()"> Contactez-moi </button>
         <img src="assets/photographers/${this.portrait}" tabindex="0" alt="${this.alt}">
        ` ;
     }

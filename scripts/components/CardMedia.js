@@ -9,12 +9,13 @@ export default class CardMedia extends Component {
      * @param {String} props.image
      * @param {number} props.likes
      * @param {number} props.id
+     *  @param {String} props.alt
      */
     constructor(DOMtarget, props, updateLikes) {
         super(DOMtarget, props.title, "article", props);
         this.updateLikes = updateLikes;
         this.DOM.className = "card-media";
-        this.DOM.tabIndex = -1;
+        this.DOM.tabIndex = "-1";
         this.DOM.id = this.id;
         this.liked = false;
         if (!window.mediaComponents) window.mediaComponents = [];
@@ -24,12 +25,12 @@ export default class CardMedia extends Component {
 
     render() {
         this.DOM.innerHTML = `
-        <input type="image"  class="mediaFirst" tabindex=0 src="assets/images/${this.image}" alt="${this.alt}" onclick="components_lightbox.showLightBox(${this.id})"> 
+        <img class="mediaFirst" tabindex=0 src="assets/images/${this.image}" alt="${this.alt}" onclick="components_lightbox.showLightBox(${this.id})">
         <div class="description">
         <h2 tabindex=0>${this.title}</h2>
-        <div class="likes">
+        <div class="likes" aria-labelledby="nombre de likes pour ${this.title}" >
         <p tabindex=0 class="showLikes"> ${this.likes} </p>
-        <button class="heart" onclick="${this.component_id}.Like(${this.id})"></button>
+        <button class="heart" aria-labelledby="clickez pour aimer ${this.title}  onclick="${this.component_id}.Like(${this.id})"></button>
         </div>
         </div>
        ` ;

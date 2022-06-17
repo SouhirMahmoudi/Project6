@@ -14,7 +14,7 @@ export default class CardVideo extends Component {
         super(DOMtarget, props.title, "article", props);
         this.updateLikes = updateLikes;
         this.DOM.className = "card-media";
-        this.DOM.tabIndex = -1;
+        this.DOM.tabIndex = "-1";
         this.DOM.id = this.id;
         if (!window.mediaComponents) window.mediaComponents = [];
         window.mediaComponents.push(this);
@@ -37,13 +37,14 @@ export default class CardVideo extends Component {
                 src="assets/images/${this.video}#t=1" 
                 tabindex="0" 
                 onclick="components_lightbox.showLightBox(${this.id})">
+                aria-labelledby="${this.title}"
             </video>
         </div>
         <div class="description">
             <h2 tabindex=0>${this.title}</h2>
-            <div class="likes">
+            <div class="likes" aria-labelledby="nombre de likes pour ${this.title}">
                 <p tabindex=0 class="ShowLikes"> ${this.likes} </p>
-                <button id="btnLike" class="heart" onclick="${this.component_id}.like(${this.id})"></button>
+                <button  aria-labelledby="clickez pour aimer ${this.title} " class="heart" onclick="${this.component_id}.like(${this.id})"></button>
             </div>
         </div>
        ` ;
