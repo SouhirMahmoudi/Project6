@@ -35,7 +35,9 @@ export default class Lightbox extends Component {
         const lightContainer = document.getElementById("components_lightbox");
         lightContainer.style.display = "block";
 
-       
+        const page = document.querySelector("body");
+        page.classList.add("noScroll");
+
 
         const focusableElements = "button,video,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); // select the lightbox by it's id
@@ -67,7 +69,7 @@ export default class Lightbox extends Component {
         });
 
         firstFocusableElement.focus();
-     
+
 
         document.onkeydown = function (e) {
             switch (e.key) {
@@ -79,7 +81,7 @@ export default class Lightbox extends Component {
                     break;
                 case "Escape":
                     components_lightbox.remove();
-                    
+
             }
         };
 
@@ -134,8 +136,10 @@ export default class Lightbox extends Component {
     remove() {
         this.die();
         new Lightbox();
-       document.getElementsByClassName("mediaFirst")[0].focus();
-      
+        document.getElementsByClassName("mediaFirst")[0].focus();
+        const page = document.querySelector("body");
+        page.classList.remove("noScroll");
+
     }
 
 }
@@ -155,13 +159,13 @@ export default class Lightbox extends Component {
      document.getElementById("lbClose").focus();
  }*/
 
-   /*var video = document.getElementById("lbMedia"); 
-        
-        video.onkeypress = async function(e){
-            if((e || window.event).keyCode === 32){
-                video.paused ? await video.play() : await video.pause();
-            }
-        };*/
+/*var video = document.getElementById("lbMedia");
+     
+     video.onkeypress = async function(e){
+         if((e || window.event).keyCode === 32){
+             video.paused ? await video.play() : await video.pause();
+         }
+     };*/
 
 
 

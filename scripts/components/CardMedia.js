@@ -30,7 +30,7 @@ export default class CardMedia extends Component {
         <h2 tabindex=0>${this.title}</h2>
         <div class="likes" aria-labelledby="nombre de likes pour ${this.title}" >
         <p tabindex=0 class="showLikes"> ${this.likes} </p>
-        <button class="heart" aria-labelledby="clickez pour aimer ${this.title}  onclick="${this.component_id}.Like(${this.id})"></button>
+        <button class="heart" aria-labelledby="clickez pour aimer ${this.title}"  onclick="${this.component_id}.Like(${this.id})"></button>
         </div>
         </div>
        ` ;
