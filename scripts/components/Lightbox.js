@@ -79,13 +79,15 @@ export default class Lightbox extends Component {
             switch (e.key) {
                 case "ArrowLeft":
                     components_lightbox.gotoPreviousMedia();
+                    alert("left");
                     break;
                 case "ArrowRight":
                     components_lightbox.gotoNextMedia();
+                    alert("left");
                     break;
                 case "Escape":
                     components_lightbox.remove();
-                    break;
+                  
             }
         };
 
