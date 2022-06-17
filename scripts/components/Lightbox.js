@@ -85,6 +85,7 @@ export default class Lightbox extends Component {
                     break;
                 case "Escape":
                     components_lightbox.remove();
+                    break;
             }
         };
 
