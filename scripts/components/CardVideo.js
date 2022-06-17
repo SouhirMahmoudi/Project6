@@ -14,7 +14,7 @@ export default class CardVideo extends Component {
         super(DOMtarget, props.title, "article", props);
         this.updateLikes = updateLikes;
         this.DOM.className = "card-media";
-        this.DOM.tabIndex = "-1";
+        this.DOM.tabIndex =-1;
         this.DOM.id = this.id;
         if (!window.mediaComponents) window.mediaComponents = [];
         window.mediaComponents.push(this);

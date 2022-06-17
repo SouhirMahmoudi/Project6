@@ -17,7 +17,7 @@ export default class CardImage extends Component {
         super(DOMtarget, props.name, "div", props);
         this.DOM.className = "test";
         this.DOM.setAttribute("title", `${this.name} nouvelle page`);
-        this.DOM.tabIndex = "-1";
+        this.DOM.tabIndex =-1;
     }
 
 
