@@ -25,7 +25,7 @@ export default class CardMedia extends Component {
 
     render() {
         this.DOM.innerHTML = `
-        <img class="mediaFirst" tabindex=0 src="assets/images/${this.image}" alt="${this.alt}" onclick="components_lightbox.showLightBox(${this.id})">
+        <input type="image" class="mediaFirst" tabindex=0 src="assets/images/${this.image}" alt="${this.alt}" onclick="components_lightbox.showLightBox(${this.id})">
         <div class="description">
         <h2 tabindex=0>${this.title}</h2>
         <div class="likes" aria-labelledby="nombre de likes pour ${this.title}" >
@@ -34,7 +34,11 @@ export default class CardMedia extends Component {
         </div>
         </div>
        ` ;
-    }
+
+        }
+
+
+    
     /**
      *  @param {Number}      currentMediaId 
      * @param {object}         currentMedia
