@@ -39,10 +39,10 @@ export default class FormModal extends Component {
     <div class="modal" role="dialog"  tabindex="0">
       <header>
       <div class="headerContainer">
-      <h2>Contactez-moi</h2>
+      <h2 tabindex="1">Contactez-moi</h2>
      <button tabindex="1 aria-label="fermer formulaire"> <img src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" /></button>
       </div>
-      <h3> ${this.currentPhotographer.name}</h3>
+      <h3 tabindex="1"> ${this.currentPhotographer.name}</h3>
       </header>
       <form>
         <div class="prenom">
