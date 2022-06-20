@@ -20,7 +20,16 @@ export default class CardMedia extends Component {
         this.liked = false;
         if (!window.mediaComponents) window.mediaComponents = [];
         window.mediaComponents.push(this);
+
+        var image = document.getElementsByClassName("mediaFirst");
+        for (const elm of image) {
+            elm.onkeypress = function (e) {
+            if ((e || window.event).keyCode === 13) {
+                elm.onclick();
+            }
+        };
     }
+}
 
 
     render() {
