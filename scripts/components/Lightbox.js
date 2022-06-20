@@ -34,7 +34,21 @@ export default class Lightbox extends Component {
         this.DOM.innerHTML = this.html;
         const lightContainer = document.getElementById("components_lightbox");
         lightContainer.style.display = "block";
-
+        document.onkeydown = function (e) {
+            switch (e.key) {
+                case "ArrowLeft":
+                    components_lightbox.gotoPreviousMedia();
+                    e.preventDefault();
+                    break;
+                case "ArrowRight":
+                    components_lightbox.gotoNextMedia();
+                    e.preventDefault();
+                    break;
+                case "Escape":
+                    components_lightbox.remove();
+                    e.preventDefault();
+            }
+        };
         const page = document.querySelector("body");
         page.classList.add("noScroll");
 
@@ -71,18 +85,8 @@ export default class Lightbox extends Component {
         firstFocusableElement.focus();
 
 
-        document.onkeydown = function (e) {
-            switch (e.key) {
-                case "ArrowLeft":
-                    components_lightbox.gotoPreviousMedia();
-                    break;
-                case "ArrowRight":
-                    components_lightbox.gotoNextMedia();
-                    break;
-                case "Escape":
-                    components_lightbox.remove();
-            }
-        };
+
+
 
     }
 
