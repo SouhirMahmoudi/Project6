@@ -34,11 +34,13 @@ for (let i = 0; i < mediaList.length; i++) {
 }
 
 const dataInsert = document.getElementById("update");
-dataInsert.innerText = sumLikes;
+dataInsert.innerHTML = "<p id ='sumlikes'>"+ sumLikes+"</p>";
+
 
 function update(liked) {
     sumLikes += liked? 1 : -1 ;
-    dataInsert.innerText = sumLikes ;
+    dataInsert.innerHTML = "<p>"+ sumLikes+"</p>";
+    
 }
 
 

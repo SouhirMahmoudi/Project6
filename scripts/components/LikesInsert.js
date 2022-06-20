@@ -20,7 +20,8 @@ export default class LikesInsert extends Component {
         this.DOM.innerHTML = `
         <div id="insert" class="insert_description">
         <div class="Likes">
-        <button id="update"  class="Heart" aria-label="nombre de likes total pour les réalisations de ${this.name}" tabindex="0"></button>
+        <div tabindex="0" id="update" tabindex="0"> </div>
+        <i class="fa-solid fa-heart" tabindex="0" aria-label="c'est le nombre de likes total pour les réalisations de ${this.name}"></i>
         </div>
         <div id="price" tabindex="0">${this.price} €/jour </div>
         </div>

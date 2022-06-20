@@ -33,22 +33,22 @@ export default class CardMedia extends Component {
 
 
     render() {
-        let aria = !this.liked ? "je n'aime plus" : "j'aime";
+        let aria = !this.liked ? "appuyez pour aimer" : "j'aime";
         aria += ` ${this.title}  qui compte déjà ${this.likes} likes`;
         this.DOM.innerHTML = `
         <img class="mediaFirst" tabindex=0 src="assets/images/${this.image}" alt="${this.alt}" onclick="components_lightbox.showLightBox(${this.id})">
         <div class="description">
         <h2 tabindex=0>${this.title}</h2>
-        <div class="likes"  >
-        <span aria-hidden="true" class="showLikes"> ${this.likes} </span>
-        <button class="heart" aria-label="${aria}" onclick="${this.component_id}.Like(${this.id})"></button>
+        <div class="likes" >
+        <p tabindex=0 class="showLikes"> ${this.likes} </p>
+        <button class="heart" aria-label="${aria}"  onclick="${this.component_id}.Like(${this.id})"></button>
         </div>
         </div>
        ` ;
 
         }
 
-
+ /*  
     
     /**
      *  @param {Number}      currentMediaId 
