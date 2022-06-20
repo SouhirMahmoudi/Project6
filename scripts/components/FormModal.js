@@ -40,7 +40,7 @@ export default class FormModal extends Component {
       <header>
       <div class="headerContainer">
       <h2 tabindex="1">Contactez-moi</h2>
-     <button tabindex="1 aria-label="fermer formulaire"> <img src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" /></button>
+     <button tabindex="1 aria-label="fermer formulaire"> <img aria-label="fermer formulaire" src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" /></button>
       </div>
       <h3 tabindex="1"> ${this.currentPhotographer.name}</h3>
       </header>
@@ -86,7 +86,7 @@ export default class FormModal extends Component {
 
 
       const focusableElements =
-        "button, input, textarea, [tabindex]:not([tabindex='-1'])";
+        "button,h2,h3, input, textarea, [tabindex]:not([tabindex='-1'])";
       const modal = document.querySelector(".modal"); // select the modal by it's id
  
       const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal

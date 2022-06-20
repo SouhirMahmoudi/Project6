@@ -32,19 +32,20 @@ export default class CardVideo extends Component {
         this.DOM.innerHTML = `
         <div class="VideoContainer">
             <video 
+            aria-label="${this.title}"
             class="mediaFirst"
                 id="video" 
                 src="assets/images/${this.video}#t=1" 
                 tabindex="0" 
                 onclick="components_lightbox.showLightBox(${this.id})">
-                aria-labelledby="${this.title}"
+              
             </video>
         </div>
         <div class="description">
             <h2 tabindex=0>${this.title}</h2>
-            <div class="likes" aria-labelledby="nombre de likes pour ${this.title}">
+            <div class="likes" aria-label="nombre de likes pour ${this.title}">
                 <p tabindex=0 class="ShowLikes"> ${this.likes} </p>
-                <button  aria-labelledby="clickez pour aimer ${this.title} " class="heart" onclick="${this.component_id}.like(${this.id})"></button>
+                <button  aria-label="j'aime ${this.title}" class="heart" onclick="${this.component_id}.like(${this.id})"></button>
             </div>
         </div>
        ` ;
