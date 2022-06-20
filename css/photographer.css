@@ -244,6 +244,9 @@ button.heart::after {
   border-radius: 0px;
   font-weight: bold;
 }
+#divDesc{
+  display: none;
+}
 #update {
   font-weight: bold;
   font-size: 24px;
@@ -255,6 +258,9 @@ div#update {
   margin-top: -5px;
 }
 
+.screen-reader-text {
+  display:none;
+}
 button.Heart {
   font-size: 23px;
   background-color: transparent;

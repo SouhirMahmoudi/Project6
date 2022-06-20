@@ -43,8 +43,8 @@ export default class CardVideo extends Component {
         </div>
         <div class="description">
             <h2 tabindex=0>${this.title}</h2>
-            <div class="likes" aria-label="nombre de likes pour ${this.title}">
-                <p tabindex=0 class="ShowLikes"> ${this.likes} </p>
+            <div class="likes">
+                <p aria-label="nombre de likes pour ${this.title}" tabindex=0 class="ShowLikes"> ${this.likes} </p>
                 <button  aria-label="j'aime ${this.title}" class="heart" onclick="${this.component_id}.like(${this.id})"></button>
             </div>
         </div>

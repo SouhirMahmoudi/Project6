@@ -21,7 +21,7 @@ export default class LikesInsert extends Component {
         <div id="insert" class="insert_description">
         <div class="Likes">
         <div tabindex="0" id="update" aria-label="nombre de likes total pour les réalisations de ${this.name}">
-       </div>
+       </div> 
         <button class="Heart" tabindex="-1"></button>
         </div>
         <div id="price" tabindex="0">${this.price} €/jour </div>
