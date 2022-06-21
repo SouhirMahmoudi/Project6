@@ -643,16 +643,14 @@ button#btnFirst:hover::after {
   flex-direction: column;
 }
 
-i.fa-solid.fa-heart {
+i.fas.fa-heart {
   font-size: 23px;
   font-weight: bold;
-  border: 4px solid red;
   height: 23px;
   width: 23px;
-  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:23px;
+  margin-top:27px;
   margin-left:5px;
 }
