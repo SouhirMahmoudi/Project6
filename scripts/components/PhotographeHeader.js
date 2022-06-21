@@ -14,7 +14,7 @@ export default class PhotographeHeader extends  Component{
     constructor(DOMtarget, props){
         super(DOMtarget, props.name, "div", props);
         this.DOM.className="photograph-header";
-        this.DOM.tabIndex=-1;
+        this.DOM.tabIndex = -1;
     }
     
 
