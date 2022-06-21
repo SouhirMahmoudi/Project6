@@ -1,10 +1,9 @@
-/*#contact_modal {
-    display: none;
-}*/
+/***********page photographe*******/
+
+/****base****/
 .noScroll {
   overflow: hidden;
 }
-
 a {
   border: 5px solid transparent;
   outline: 0;
@@ -14,7 +13,6 @@ a.lienLogo {
   height: 100%;
   width: 20%;
 }
-
 p,
 h2,
 h1,
@@ -24,7 +22,6 @@ video {
   border: 2px solid transparent;
   outline: 0;
 }
-
 article:focus,
 p:focus,
 h2:focus,
@@ -53,6 +50,7 @@ button:focus {
   outline: none !important;
 }
 
+/****header****/
 .photographer .logo {
   height: 50px;
   width: 200px;
@@ -61,7 +59,6 @@ button:focus {
   margin-left: 9px;
 }
 .photograph-header {
-  /* height: 313px; */
   height: 313px;
   width: 100%;
   margin-top: 50.8px;
@@ -119,7 +116,7 @@ button:focus {
   margin-top: 16px;
   margin-bottom: 0px;
 }
-
+/*****main******/
 .photographer {
   margin: 24px 100px;
 }
@@ -202,14 +199,10 @@ button.heart::after {
   font-family: "Font awesome 5 free";
   height: 18.350000381469727px;
   width: 17.5px;
-  /* margin-left: 1.75px; */
-  /* margin-top: 3px; */
   border-radius: 0px;
   color: #911c1c;
   font-weight: bold;
   font-size: 1.5rem;
-  /* display: flex; */
-  /* align-items: center;*/
 }
 .insert {
   height: 89px;
@@ -338,23 +331,8 @@ button.Heart::after {
   justify-content: space-between;
   width: 100%;
 }
-
-/*.modal header #image {
-  position: absolute;
-  left: 89.83%;
-  right: -13.17%;
-  top: 4.83%;
-  bottom: 20.83%;
-  cursor: pointer;
-}*/
-/*input#close {
-  position: absolute;
-  left:719px;
-  top: 42px;
-}*/
 .modal header h2,
 .modal header h3 {
-  /* position: absolute;*/
   left: 4.23%;
   right: 27.65%;
   top: 1.67%;
@@ -407,7 +385,6 @@ form input {
 
 textarea#message {
   height: 170px;
-  /* width: 599px; */
   left: 35px;
   top: 597px;
   border-radius: 5px;
@@ -607,21 +584,6 @@ button#btnFirst {
   left: 133px;
   color: white;
 }
-
-/* button#btnFirst::after {
-    content: "\f078";
-    height: 21px;
-    width: 20px;
-    font-family: "Font awesome 5 free";
-    padding-left: -10px;
-    padding-left: 27px;
-    font-weight: bold;
-
-}
-button#btnFirst:hover::after {
-
-  transform: rotate(45deg);
-}*/
 .NONE {
   display: none;
 }
@@ -637,12 +599,10 @@ button#btnFirst:hover::after {
   top: 520px;
   background: #911c1c;
 }
-
 .Dropdown.IsVisible {
   display: flex;
   flex-direction: column;
 }
-
 i.fas.fa-heart {
   font-size: 23px;
   font-weight: bold;

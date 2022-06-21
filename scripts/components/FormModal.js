@@ -4,10 +4,6 @@ import {
 } from "../../data/dataManager.js";
 export default class FormModal extends Component {
   showForm = false;
-  $body = document.querySelector(".photographer");
-  $main = document.getElementById("mainPhotographer");
-  // $modal = document.getElementsByClassName(".formModal");
-  // openModalBtn;
   modalCloseBtn = document.getElementById("#close");
 
 
@@ -87,11 +83,11 @@ export default class FormModal extends Component {
 
       const focusableElements =
         "button,h2,h3, input, textarea, [tabindex]:not([tabindex='-1'])";
-      const modal = document.querySelector(".modal"); // select the modal by it's id
+      const modal = document.querySelector(".modal"); 
  
-      const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+      const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; 
       const focusableContent = modal.querySelectorAll(focusableElements);
-      const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+      const lastFocusableElement = focusableContent[focusableContent.length - 1]; 
        console.log(focusableContent,firstFocusableElement);
 
       document.addEventListener("keydown", function (e) {
@@ -101,14 +97,14 @@ export default class FormModal extends Component {
           return;
         }
 
-        if (e.shiftKey) { // if shift key pressed for shift + tab combination
+        if (e.shiftKey) { 
           if (document.activeElement === firstFocusableElement) {
-            lastFocusableElement.focus(); // add focus for the last focusable element
+            lastFocusableElement.focus(); 
             e.preventDefault();
           }
-        } else { // if tab key is pressed
-          if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
-            firstFocusableElement.focus(); // add focus for the first focusable element
+        } else { 
+          if (document.activeElement === lastFocusableElement) { 
+            firstFocusableElement.focus();  
             e.preventDefault();
           }
         }

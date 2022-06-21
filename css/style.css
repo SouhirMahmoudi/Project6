@@ -1,51 +1,38 @@
 @import url("photographer.css");
 
+/****home page******/
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
 }
-
+/***header****/
 .index header {
   display: flex;
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
   align-items: center;
-  /* height: 90px; */
   grid-template-columns: 60% auto;
   width: 88%;
   margin: 44px 100px;
 }
-
 .index header h1 {
   color: #901c1c;
-  /* height: 47px; */
   width: 100%;
-  /* margin-left: 1034px; */
-  /* margin-top: 44px; */
-  /* border-radius: 0px; */
-  /* font-family: DM Sans; */
   font-size: 36px;
   font-weight: 400;
   line-height: 47px;
   letter-spacing: 0em;
   text-align: right;
 }
-
 .logo {
   height: 50px;
 }
 
+/****main******/
 .photographer_section {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* gap: 70px; */
-  /* margin-top: 100px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 76px -30px;
 }
-
 .photographer_section article {
   justify-self: center;
   display: flex;
@@ -53,12 +40,10 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
 .photographer_section article h2 {
   color: #d3573c;
   font-size: 36px;
 }
-
 .photographer_section article img {
   height: 200px;
   width: 200px;
@@ -70,7 +55,6 @@ body {
   background: #c4c4c4;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
 }
-
 .test {
   margin-bottom: 75px;
   justify-self: center;
@@ -79,11 +63,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 450px;
-  /* height: 358px; */
   text-align: center;
-  /* right: -82%; */
-  /* top: -25%; */
-  /* bottom: -54%; */
 }
 .test img {
   height: 200px;
@@ -102,28 +82,23 @@ body {
 .test p {
   margin: 0;
 }
-
 .CardDescription {
   line-height: 13.02px;
 }
-
 .city {
   color: rgba(144, 28, 28, 1);
   font-size: 13px;
   font-weight: 400;
 }
-
 .tagline {
   font-size: 10px;
   font-weight: 400;
 }
-
 .prix {
   font-size: 9px;
   font-weight: 400;
   color: rgba(117, 117, 117, 1);
 }
-
 p.price {
   font-family: DM Sans;
   font-size: 9px;
@@ -144,7 +119,7 @@ a * {
   text-decoration: none;
 }
 
-.screen-reader-text{
+.screen-reader-text {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

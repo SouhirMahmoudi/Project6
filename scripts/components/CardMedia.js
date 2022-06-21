@@ -47,15 +47,10 @@ export default class CardMedia extends Component {
        ` ;
 
         }
-
- /*  
-    
-    /**
+  /**
      *  @param {Number}      currentMediaId 
      * @param {object}         currentMedia
    **/
-
-
     Like(mediaId) {
         this.liked = !this.liked;
         if (!this.liked) this.likes--;
