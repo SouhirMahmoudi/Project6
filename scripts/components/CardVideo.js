@@ -14,7 +14,7 @@ export default class CardVideo extends Component {
         super(DOMtarget, props.title, "article", props);
         this.updateLikes = updateLikes;
         this.DOM.className = "card-media";
-        this.DOM.tabIndex =-1;
+        this.DOM.tabIndex ="-1";
         this.DOM.id = this.id;
         if (!window.mediaComponents) window.mediaComponents = [];
         window.mediaComponents.push(this);
@@ -29,6 +29,8 @@ export default class CardVideo extends Component {
     }
 
     render() {
+        let aria = !this.liked ? "appuyez pour aimer" : "j'aime";
+        aria += ` ${this.title}  qui compte déjà ${this.likes} likes`;
         this.DOM.innerHTML = `
         <div class="VideoContainer">
             <video 
@@ -42,10 +44,10 @@ export default class CardVideo extends Component {
             </video>
         </div>
         <div class="description">
-            <h2 tabindex=0>${this.title}</h2>
+            <h2 tabindex="0">${this.title}</h2>
             <div class="likes">
-                <p aria-label="nombre de likes pour ${this.title}" tabindex=0 class="ShowLikes"> ${this.likes} </p>
-                <button  aria-label="j'aime ${this.title}" class="heart" onclick="${this.component_id}.like(${this.id})"></button>
+                <p tabindex="-1" class="ShowLikes"> ${this.likes} </p>
+                <button  aria-label="${aria}" class="heart" onclick="${this.component_id}.like(${this.id})"></button>
             </div>
         </div>
        ` ;

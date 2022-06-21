@@ -36,7 +36,7 @@ export default class FormModal extends Component {
       <header>
       <div class="headerContainer">
       <h2 tabindex="1">Contactez-moi</h2>
-     <button tabindex="1 aria-label="fermer formulaire"> <img aria-label="fermer formulaire" src="assets/icons/close.svg" id="close" onclick="${this.component_id}.closeModal()" /></button>
+     <button tabindex="1 aria-label="fermer formulaire" onclick="${this.component_id}.closeModal()"> <img aria-label="fermer formulaire" src="assets/icons/close.svg" id="close" /></button>
       </div>
       <h3 tabindex="1"> ${this.currentPhotographer.name}</h3>
       </header>
@@ -83,10 +83,11 @@ export default class FormModal extends Component {
       "button,h2,h3, input, textarea, [tabindex]:not([tabindex='-1'])";
     const modal = document.querySelector(".modal");
 
+
     const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
     const focusableContent = modal.querySelectorAll(focusableElements);
     const lastFocusableElement = focusableContent[focusableContent.length - 1];
-    console.log(focusableContent, firstFocusableElement);
+    
 
     document.addEventListener("keydown", function (e) {
       let isTabPressed = e.key === "Tab" || e.keyCode === 9;

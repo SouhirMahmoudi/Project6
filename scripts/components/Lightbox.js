@@ -109,7 +109,7 @@ export default class Lightbox extends Component {
         if (this.currentMedia.image) {
             return `<img src="./assets/images/${this.currentMedia.image}" id="lbMedia" tabindex="1" alt="${this.currentMedia.alt}" />`;
         }
-        return `<video controls id="lbMedia" tabindex=1> 
+        return `<video controls id="lbMedia" tabindex="1"> 
         <source src="assets/images/${this.currentMedia.video}" type="video/mp4" aria-label="${this.currentMedia.title}"/>
     </video>`;
     }
