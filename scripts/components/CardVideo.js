@@ -29,8 +29,7 @@ export default class CardVideo extends Component {
     }
 
     render() {
-        let aria = !this.liked ? "appuyez pour aimer" : "j'aime";
-        aria += ` ${this.title}  qui compte déjà ${this.likes} likes`;
+        let aria = !this.liked ? `appuyez pour aimer ${this.title}  qui compte déjà ${this.likes} likes` : ` j'aime ${this.title}  qui compte maintenant ${this.likes} likes`;
         this.DOM.innerHTML = `
         <div class="VideoContainer">
             <video 
