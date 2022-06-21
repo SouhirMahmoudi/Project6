@@ -24,12 +24,12 @@ export default class CardMedia extends Component {
         var image = document.getElementsByClassName("mediaFirst");
         for (const elm of image) {
             elm.onkeypress = function (e) {
-            if ((e || window.event).keyCode === 13) {
-                elm.onclick();
-            }
-        };
+                if ((e || window.event).keyCode === 13) {
+                    elm.onclick();
+                }
+            };
+        }
     }
-}
 
 
     render() {
@@ -46,11 +46,11 @@ export default class CardMedia extends Component {
         </div>
        ` ;
 
-        }
-  /**
-     *  @param {Number}      currentMediaId 
-     * @param {object}         currentMedia
-   **/
+    }
+    /**
+       *  @param {Number}      currentMediaId 
+       * @param {object}         currentMedia
+     **/
     Like(mediaId) {
         this.liked = !this.liked;
         if (!this.liked) this.likes--;
@@ -60,10 +60,10 @@ export default class CardMedia extends Component {
         var currentMedia = document.getElementById(mediaId);
         var currentElem = currentMedia.querySelector(".heart");
         currentElem.focus();
-        
+
     }
 
-    
+
 
 }
 
