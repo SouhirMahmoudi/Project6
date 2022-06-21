@@ -31,7 +31,4 @@ export default class LikesInsert extends Component {
    
 
 
-    // click(){
-    //   window.location.href=`./photographer.html?${this.id}`;
-    //}
 }

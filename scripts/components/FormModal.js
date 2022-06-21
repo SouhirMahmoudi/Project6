@@ -29,8 +29,8 @@ export default class FormModal extends Component {
     };
   }
 
-    formTemplate() {
-      return `
+  formTemplate() {
+    return `
     <div id="contact_modal">
     <div class="modal" role="dialog"  tabindex="0">
       <header>
@@ -68,63 +68,61 @@ export default class FormModal extends Component {
   </div>
 
     `;
-    }
+  }
 
 
 
 
-    displayModal() {
-      this.showForm = true;
-      this.renderModal();
-      const page = document.querySelector("body");
-      page.classList.add("noScroll");
+  displayModal() {
+    this.showForm = true;
+    this.renderModal();
+    const page = document.querySelector("body");
+    page.classList.add("noScroll");
+    //garder le focus en lightbox quand le lihghtbox est ouvert   
+    const focusableElements =
+      "button,h2,h3, input, textarea, [tabindex]:not([tabindex='-1'])";
+    const modal = document.querySelector(".modal");
 
+    const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
+    const focusableContent = modal.querySelectorAll(focusableElements);
+    const lastFocusableElement = focusableContent[focusableContent.length - 1];
+    console.log(focusableContent, firstFocusableElement);
 
+    document.addEventListener("keydown", function (e) {
+      let isTabPressed = e.key === "Tab" || e.keyCode === 9;
 
-      const focusableElements =
-        "button,h2,h3, input, textarea, [tabindex]:not([tabindex='-1'])";
-      const modal = document.querySelector(".modal"); 
- 
-      const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; 
-      const focusableContent = modal.querySelectorAll(focusableElements);
-      const lastFocusableElement = focusableContent[focusableContent.length - 1]; 
-       console.log(focusableContent,firstFocusableElement);
+      if (!isTabPressed) {
+        return;
+      }
 
-      document.addEventListener("keydown", function (e) {
-        let isTabPressed = e.key === "Tab" || e.keyCode === 9;
-
-        if (!isTabPressed) {
-          return;
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusableElement) {
+          lastFocusableElement.focus();
+          e.preventDefault();
         }
-
-        if (e.shiftKey) { 
-          if (document.activeElement === firstFocusableElement) {
-            lastFocusableElement.focus(); 
-            e.preventDefault();
-          }
-        } else { 
-          if (document.activeElement === lastFocusableElement) { 
-            firstFocusableElement.focus();  
-            e.preventDefault();
-          }
+      } else {
+        if (document.activeElement === lastFocusableElement) {
+          firstFocusableElement.focus();
+          e.preventDefault();
         }
-      });
+      }
+    });
 
-      firstFocusableElement.focus();
-
-    }
-
-    closeModal() {
-      this.showForm = false;
-      this.renderModal();
-      const page = document.querySelector("body");
-      page.classList.remove("noScroll");
-      
-      document.getElementById("btnContact").focus();
-    }
-
+    firstFocusableElement.focus();
 
   }
+
+  closeModal() {
+    this.showForm = false;
+    this.renderModal();
+    const page = document.querySelector("body");
+    page.classList.remove("noScroll");
+
+    document.getElementById("btnContact").focus();
+  }
+
+
+}
 
 
 

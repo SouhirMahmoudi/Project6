@@ -92,10 +92,6 @@ export default class SortInsert extends Component {
 
 
 
-/*
-   <select id="sort-box" name="select-box" onchange="${this.component_id}.sort(this)">
-       <option value="popularity"> Popularité </option>
-       <option value="date">Date</option>
-       <option value="title">Titre</option>
-   </select>*/
+
+  
 

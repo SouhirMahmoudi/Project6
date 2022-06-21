@@ -51,7 +51,7 @@ mediaContainer.className="mediaContainer";
 DOMphotographerInfo.appendChild(mediaContainer);
 
 
-
+// creation instances lightbox & Formodal
 new Lightbox();
 new FormModal(idPhotographer);
 
@@ -59,8 +59,7 @@ new FormModal(idPhotographer);
 //afficher image ou video page photographe
 
 function showMediaFactory() {
-    //const target = document.getElementById("mainPhotographer");
-//    console.log(getMediaByPhotographerId(idPhotographer)) 
+
     for (const media of photographerMedia) {
         if (media.hasOwnProperty("image")) {
             new CardMedia(mediaContainer, media, update);

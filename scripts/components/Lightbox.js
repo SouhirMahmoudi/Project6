@@ -52,7 +52,7 @@ export default class Lightbox extends Component {
         const page = document.querySelector("body");
         page.classList.add("noScroll");
 
-
+         //garder le focus en lightbox quand le lihghtbox est ouvert
         const focusableElements = "button,video,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); 
 
@@ -147,28 +147,6 @@ export default class Lightbox extends Component {
 
 }
 
-
-
-/* keyListener(event) {
-     // alert("out");
-     if (event.code === "Tab") {
-         setTimeout(lightbox.checkFocus, 100);
-     }
- }
- 
- /*checkFocus() {
-     const currentId = document.activeElement.id ? document.activeElement.id : null;
-     if (currentId !== null && lightbox.possibleIds.includes(currentId)) return;
-     document.getElementById("lbClose").focus();
- }*/
-
-/*var video = document.getElementById("lbMedia");
-     
-     video.onkeypress = async function(e){
-         if((e || window.event).keyCode === 32){
-             video.paused ? await video.play() : await video.pause();
-         }
-     };*/
 
 
 
