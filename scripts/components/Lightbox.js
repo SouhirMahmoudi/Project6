@@ -51,8 +51,7 @@ export default class Lightbox extends Component {
         };
         const page = document.querySelector("body");
         page.classList.add("noScroll");
-
-         //garder le focus en lightbox quand le lihghtbox est ouvert
+        //garder le focus en lightbox quand le lihghtbox est ouvert
         const focusableElements = "button,video,img,input,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); 
 
@@ -88,6 +87,8 @@ export default class Lightbox extends Component {
 
 
 
+
+         
     }
 
 
@@ -101,6 +102,8 @@ export default class Lightbox extends Component {
             <h4>${this.currentMedia.title}</h4>
             </div>
         `;
+
+        
     }
 
 
@@ -123,6 +126,42 @@ export default class Lightbox extends Component {
         this.currentMedia = this.mediaList[newPosition];
         this.currentMediaId = this.currentMedia.id;
         this.DOM.innerHTML = this.html;
+        //garder le focus en lightbox quand le lihghtbox est ouvert
+        const focusableElements = "button,video,img,input,[tabindex]:not([tabindex='-1'])";
+        const lightbox = document.querySelector(".lightbox"); 
+
+        const firstFocusableElement = lightbox.querySelectorAll(focusableElements)[0]; 
+        const focusableContent = lightbox.querySelectorAll(focusableElements);
+        const lastFocusableElement = focusableContent[focusableContent.length - 1]; 
+
+
+
+        document.addEventListener("keydown", function (e) {
+            let isTabPressed = e.key === "Tab" || e.keyCode === 9;
+
+            if (!isTabPressed) {
+                return;
+            }
+
+            if (e.shiftKey) { 
+                if (document.activeElement === firstFocusableElement) {
+                    lastFocusableElement.focus(); 
+                    e.preventDefault();
+                }
+            } else { 
+                if (document.activeElement === lastFocusableElement) { 
+                    firstFocusableElement.focus(); 
+                    e.preventDefault();
+                }
+            }
+        });
+
+        firstFocusableElement.focus();
+
+
+
+
+
 
     }
 
@@ -132,6 +171,42 @@ export default class Lightbox extends Component {
         this.currentMedia = this.mediaList[newPosition];
         this.currentMediaId = this.currentMedia.id;
         this.DOM.innerHTML = this.html;
+        //garder le focus en lightbox quand le lihghtbox est ouvert
+        const focusableElements = "button,video,img,input,[tabindex]:not([tabindex='-1'])";
+        const lightbox = document.querySelector(".lightbox"); 
+
+        const firstFocusableElement = lightbox.querySelectorAll(focusableElements)[0]; 
+        const focusableContent = lightbox.querySelectorAll(focusableElements);
+        const lastFocusableElement = focusableContent[focusableContent.length - 1]; 
+
+
+
+        document.addEventListener("keydown", function (e) {
+            let isTabPressed = e.key === "Tab" || e.keyCode === 9;
+
+            if (!isTabPressed) {
+                return;
+            }
+
+            if (e.shiftKey) { 
+                if (document.activeElement === firstFocusableElement) {
+                    lastFocusableElement.focus(); 
+                    e.preventDefault();
+                }
+            } else { 
+                if (document.activeElement === lastFocusableElement) { 
+                    firstFocusableElement.focus(); 
+                    e.preventDefault();
+                }
+            }
+        });
+
+        firstFocusableElement.focus();
+
+
+
+
+
     }
 
 
