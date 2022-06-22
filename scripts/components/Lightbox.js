@@ -53,7 +53,7 @@ export default class Lightbox extends Component {
         page.classList.add("noScroll");
 
          //garder le focus en lightbox quand le lihghtbox est ouvert
-        const focusableElements = "button,video,[tabindex]:not([tabindex='-1'])";
+        const focusableElements = "button,video,img,input,[tabindex]:not([tabindex='-1'])";
         const lightbox = document.querySelector(".lightbox"); 
 
         const firstFocusableElement = lightbox.querySelectorAll(focusableElements)[0]; 
