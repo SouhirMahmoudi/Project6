@@ -456,6 +456,14 @@ div#components_lightbox {
   margin-left: 92px;
   margin-top: 21px;
 }
+#lbVideo {
+  background: #c4c4c4;
+  height: 900px;
+  width: 1050px;
+  border-radius: 5px;
+  margin-left: 92px;
+  margin-top: 21px;
+}
 
 #lbClose {
   height: 42px;
